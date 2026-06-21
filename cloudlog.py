@@ -28,14 +28,21 @@ STANDARD_FIELDS = ["timestamp", "file_path", "action", "user", "ip", "device"]
 # 支持的操作动作
 ACTIONS = ["上传", "下载", "删除", "分享", "查看", "编辑", "移动", "复制", "重命名", "外链访问"]
 
-# 高风险动作（风险视图）
+# 高风险动作
 RISK_ACTIONS = ["外链访问", "分享", "删除"]
 
-# 夜间操作时间段（风险视图，00:00 - 06:00）
+# 夜间操作时间段（00:00 - 06:00）
 NIGHT_HOUR_START = 0
 NIGHT_HOUR_END = 6
 
-# 支持的时间格式（排序和匹配都用）
+# 风险等级定义
+RISK_LEVELS = OrderedDict([
+    ("high",   {"label": "高风险", "icon": "🔴", "color": "red"}),
+    ("medium", {"label": "中风险", "icon": "🟠", "color": "orange"}),
+    ("low",    {"label": "低风险", "icon": "🟡", "color": "yellow"}),
+])
+
+# 支持的时间格式
 TIMESTAMP_FORMATS = (
     "%Y-%m-%d %H:%M:%S",
     "%Y-%m-%dT%H:%M:%S",
@@ -45,6 +52,9 @@ TIMESTAMP_FORMATS = (
     "%Y/%m/%d %H:%M:%S",
     "%Y/%m/%d %H:%M",
 )
+
+# 分组方式
+GROUP_MODES = ["none", "file", "user", "file+user"]
 
 # 模拟的文件路径目录
 FILE_PATHS = [
@@ -84,13 +94,10 @@ USERS = [
 
 
 # ============================================================
-# 统一时间解析（支持 ISO T 格式与普通格式混排）
+# 统一时间解析
 # ============================================================
 def parse_timestamp(ts_str):
-    """
-    解析任意支持格式的时间字符串，返回 datetime 对象
-    失败则返回 None
-    """
+    """解析任意支持格式的时间字符串，返回 datetime 对象，失败则返回 None"""
     if not ts_str:
         return None
     for fmt in TIMESTAMP_FORMATS:
@@ -107,6 +114,53 @@ def is_night_operation(ts_str):
     if dt is None:
         return False
     return NIGHT_HOUR_START <= dt.hour < NIGHT_HOUR_END
+
+
+# ============================================================
+# 风险等级系统
+# ============================================================
+def assess_risk(record):
+    """
+    评估记录的风险等级
+    返回: (level, reason)  level ∈ {'high', 'medium', 'low', None}
+    """
+    action = record.get("action", "")
+    ts = record.get("timestamp", "")
+    is_night = is_night_operation(ts)
+    is_delete = (action == "删除")
+    is_external = (action == "外链访问")
+    is_share = (action == "分享")
+
+    level = None
+    reasons = []
+
+    # 高风险：删除+夜间 / 外链访问+夜间
+    if (is_delete and is_night) or (is_external and is_night):
+        level = "high"
+        if is_delete and is_night:
+            reasons.append("夜间删除文件")
+        if is_external and is_night:
+            reasons.append("夜间外链访问")
+
+    # 中风险：删除(非夜间) / 外链访问(非夜间) / 分享+夜间
+    elif is_delete or is_external or (is_share and is_night):
+        level = "medium"
+        if is_delete:
+            reasons.append("删除文件")
+        if is_external:
+            reasons.append("外链访问")
+        if is_share and is_night:
+            reasons.append("夜间分享文件")
+
+    # 低风险：分享(非夜间) / 仅夜间操作
+    elif is_share or is_night:
+        level = "low"
+        if is_share:
+            reasons.append("分享文件")
+        if is_night:
+            reasons.append("夜间操作")
+
+    return level, "+".join(reasons) if reasons else ""
 
 
 # ============================================================
@@ -132,7 +186,6 @@ def generate_mock_logs(count=500, output_path=None):
             days=days_ago, hours=hours_ago, minutes=minutes_ago, seconds=seconds_ago
         )
 
-        # 30% 概率使用 ISO T 格式，模拟真实混合数据
         if random.random() < 0.3:
             timestamp = ts.strftime("%Y-%m-%dT%H:%M:%S")
         else:
@@ -148,7 +201,6 @@ def generate_mock_logs(count=500, output_path=None):
         }
         records.append(record)
 
-    # 按统一解析后的时间排序
     records.sort(key=lambda r: parse_timestamp(r["timestamp"]) or datetime.min, reverse=True)
 
     suffix = Path(output_path).suffix.lower()
@@ -167,10 +219,10 @@ def generate_mock_logs(count=500, output_path=None):
 
 
 # ============================================================
-# 日志加载（支持 CSV / JSONL + 字段映射）
+# 日志加载
 # ============================================================
 def parse_field_mapping(map_str):
-    """解析字段映射字符串，如 '时间=timestamp,路径=file_path'"""
+    """解析字段映射字符串"""
     mapping = {}
     if not map_str:
         return mapping
@@ -281,7 +333,7 @@ def load_logs(input_path=None, field_mapping=None):
 
 
 # ============================================================
-# 日期解析辅助（保存相对日期原样，不立即计算）
+# 日期解析（支持相对日期动态计算）
 # ============================================================
 RELATIVE_DATE_KEYWORDS = ("today", "yesterday", "lastweek", "lastmonth")
 
@@ -299,15 +351,10 @@ def is_relative_date(date_str):
 
 
 def parse_date(date_str, end_of_day=False):
-    """
-    解析日期字符串，支持多种格式
-    - 如果是相对日期（today/7days 等），按当前时间动态计算
-    - end_of_day=True 时返回当天 23:59:59
-    """
+    """解析日期字符串，支持多种格式"""
     if not isinstance(date_str, str):
         return None
 
-    # 先尝试相对日期
     s = date_str.lower().strip()
     now = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
     parsed = None
@@ -327,7 +374,6 @@ def parse_date(date_str, end_of_day=False):
         except ValueError:
             pass
 
-    # 再尝试绝对日期
     if parsed is None:
         formats = ["%Y-%m-%d", "%Y/%m/%d", "%Y%m%d"]
         for fmt in formats:
@@ -362,13 +408,7 @@ class LogSearcher:
         actions=None,
         risk_only=False,
     ):
-        """
-        多条件组合检索
-        - file_keyword/user_keyword 支持逗号分隔多值（批量审计）
-        - risk_only=True 只返回风险记录（外链/分享/删除 + 夜间）
-        返回匹配结果列表，每条记录附带命中原因
-        """
-        # 解析批量关键词
+        """多条件组合检索，支持逗号分隔多值"""
         file_keywords = None
         if file_keyword:
             file_keywords = [k.strip() for k in file_keyword.split(",") if k.strip()]
@@ -382,7 +422,6 @@ class LogSearcher:
             matched = True
             hit_reasons = []
 
-            # 文件关键词匹配（支持多值，任一命中即可）
             if file_keywords:
                 fp = str(record.get("file_path", "")).lower()
                 matched_any = False
@@ -393,7 +432,6 @@ class LogSearcher:
                 if not matched_any:
                     matched = False
 
-            # 用户关键词匹配（支持多值，任一命中即可）
             if user_keywords and matched:
                 usr = str(record.get("user", "")).lower()
                 matched_any = False
@@ -404,7 +442,6 @@ class LogSearcher:
                 if not matched_any:
                     matched = False
 
-            # 日期范围匹配
             if matched and (date_from or date_to):
                 record_date = parse_timestamp(record.get("timestamp", ""))
                 if record_date is None:
@@ -419,44 +456,38 @@ class LogSearcher:
                         dt = date_to.strftime("%Y-%m-%d") if date_to else "*"
                         hit_reasons.append("时间在 {} ~ {} 内".format(df, dt))
 
-            # 动作筛选
             if actions and matched:
                 if record.get("action", "") in actions:
                     hit_reasons.append("动作为 '{}'".format(record["action"]))
                 else:
                     matched = False
 
-            # 风险视图过滤
+            # 风险视图过滤（仅保留有风险等级的记录）
             if risk_only and matched:
-                is_risk_action = record.get("action", "") in RISK_ACTIONS
-                is_night = is_night_operation(record.get("timestamp", ""))
-                if is_risk_action or is_night:
-                    risk_tags = []
-                    if is_risk_action:
-                        risk_tags.append("高风险动作")
-                    if is_night:
-                        risk_tags.append("夜间操作")
-                    hit_reasons.append("风险: " + "+".join(risk_tags))
+                risk_level, risk_reason = assess_risk(record)
+                if risk_level is not None:
+                    hit_reasons.append("风险: {}({})".format(
+                        RISK_LEVELS[risk_level]["label"], risk_reason
+                    ))
                 else:
                     matched = False
 
             if matched:
                 result = dict(record)
                 result["hit_reasons"] = hit_reasons if hit_reasons else ["全量匹配"]
+                # 补充风险等级信息
+                risk_level, risk_reason = assess_risk(result)
+                result["risk_level"] = risk_level
+                result["risk_reason"] = risk_reason
                 results.append(result)
 
         return results
 
     @staticmethod
     def sort_results(results, sort_by="timestamp", sort_order="desc"):
-        """
-        对结果排序（支持 ISO T 格式与普通格式混排）
-        sort_by: timestamp | file_path | user | action
-        sort_order: asc | desc
-        """
+        """排序（支持 ISO T 格式与普通格式混排）"""
         if not results:
             return results
-
         reverse = (sort_order == "desc")
 
         def sort_key(r):
@@ -470,7 +501,7 @@ class LogSearcher:
 
     @staticmethod
     def paginate(results, skip=0, head=None):
-        """分页：跳过前 skip 条，取前 head 条"""
+        """分页"""
         start = max(0, skip)
         if head is None or head <= 0:
             return results[start:]
@@ -478,46 +509,100 @@ class LogSearcher:
 
 
 # ============================================================
-# 批量审计分组：按文件关键词/用户关键词分块
+# 批量审计分组（支持 file / user / file+user 交叉）
 # ============================================================
-def build_batch_groups(results, file_keyword=None, user_keyword=None):
+def build_batch_groups(results, file_keyword=None, user_keyword=None, group_mode="auto"):
     """
     构建批量审计的分块数据
+    group_mode:
+        - 'auto'   : 自动（单维度多值则按该维度分，同时有多值则交叉）
+        - 'file'   : 按文件关键词分
+        - 'user'   : 按用户关键词分
+        - 'file+user' : 按文件×用户交叉分
+        - 'none'   : 不分块
     返回: OrderedDict { group_label: [records...] }
     """
     groups = OrderedDict()
 
-    if file_keyword:
-        keywords = [k.strip() for k in file_keyword.split(",") if k.strip()]
-        for kw in keywords:
-            label = "文件关键词: {}".format(kw)
-            matched = [r for r in results if kw.lower() in str(r.get("file_path", "")).lower()]
-            if matched:
-                groups[label] = matched
-    elif user_keyword:
-        keywords = [k.strip() for k in user_keyword.split(",") if k.strip()]
-        for kw in keywords:
-            label = "用户关键词: {}".format(kw)
-            matched = [r for r in results if kw.lower() in str(r.get("user", "")).lower()]
-            if matched:
-                groups[label] = matched
-    else:
+    if group_mode == "none" or not results:
         if results:
             groups["全部结果"] = results
+        return groups
+
+    file_keywords = []
+    user_keywords = []
+    if file_keyword:
+        file_keywords = [k.strip() for k in file_keyword.split(",") if k.strip()]
+    if user_keyword:
+        user_keywords = [k.strip() for k in user_keyword.split(",") if k.strip()]
+
+    # 自动判断分组方式
+    if group_mode == "auto":
+        if len(file_keywords) > 1 and len(user_keywords) > 1:
+            group_mode = "file+user"
+        elif len(file_keywords) > 1:
+            group_mode = "file"
+        elif len(user_keywords) > 1:
+            group_mode = "user"
+        else:
+            group_mode = "none"
+            if results:
+                groups["全部结果"] = results
+            return groups
+
+    # 按文件关键词分组
+    if group_mode == "file":
+        keywords = file_keywords if file_keywords else [""]
+        for kw in keywords:
+            label = "文件关键词: {}".format(kw) if kw else "全部文件"
+            matched = []
+            for r in results:
+                if not kw or kw.lower() in str(r.get("file_path", "")).lower():
+                    matched.append(r)
+            if matched:
+                groups[label] = matched
+
+    # 按用户关键词分组
+    elif group_mode == "user":
+        keywords = user_keywords if user_keywords else [""]
+        for kw in keywords:
+            label = "用户关键词: {}".format(kw) if kw else "全部用户"
+            matched = []
+            for r in results:
+                if not kw or kw.lower() in str(r.get("user", "")).lower():
+                    matched.append(r)
+            if matched:
+                groups[label] = matched
+
+    # 按文件×用户交叉分组
+    elif group_mode == "file+user":
+        fkws = file_keywords if file_keywords else [""]
+        ukws = user_keywords if user_keywords else [""]
+        for fkw in fkws:
+            for ukw in ukws:
+                parts = []
+                if fkw:
+                    parts.append("文件={}".format(fkw))
+                if ukw:
+                    parts.append("用户={}".format(ukw))
+                label = " + ".join(parts) if parts else "全部结果"
+                matched = []
+                for r in results:
+                    f_ok = (not fkw) or (fkw.lower() in str(r.get("file_path", "")).lower())
+                    u_ok = (not ukw) or (ukw.lower() in str(r.get("user", "")).lower())
+                    if f_ok and u_ok:
+                        matched.append(r)
+                if matched:
+                    groups[label] = matched
 
     return groups
 
 
 # ============================================================
-# 统计汇总（增强版：含高风险统计）
+# 统计汇总（增强版：含风险等级分组）
 # ============================================================
 def build_summary(results, risk_only=False):
-    """
-    构建统计汇总：
-    - 总数、最早/最晚时间
-    - 按动作分组、按操作者分组
-    - 高风险数量、涉及文件路径列表
-    """
+    """构建统计汇总：含动作/操作者/风险等级/风险文件"""
     summary = {
         "total": len(results),
         "earliest": None,
@@ -526,6 +611,7 @@ def build_summary(results, risk_only=False):
         "by_user": Counter(),
         "risk_total": 0,
         "risk_by_action": Counter(),
+        "risk_by_level": Counter(),
         "risk_files": [],
         "risk_night_count": 0,
     }
@@ -542,19 +628,18 @@ def build_summary(results, risk_only=False):
                 summary["by_user"][r["user"]] += 1
 
             # 风险统计
-            is_risk_action = r.get("action", "") in RISK_ACTIONS
-            is_night = is_night_operation(ts)
-            if is_risk_action or is_night:
+            risk_level = r.get("risk_level")
+            if risk_level is not None:
                 summary["risk_total"] += 1
-                if is_risk_action:
+                summary["risk_by_level"][risk_level] += 1
+                if r.get("action") in RISK_ACTIONS:
                     summary["risk_by_action"][r["action"]] += 1
-                if is_night:
+                if is_night_operation(ts):
                     summary["risk_night_count"] += 1
                 if r.get("file_path"):
                     risk_file_set.add(r["file_path"])
 
         if timestamps:
-            # 按统一解析后的时间排序
             sorted_pairs = sorted(
                 [(parse_timestamp(t) or datetime.min, t) for t in timestamps],
                 key=lambda x: x[0],
@@ -568,7 +653,7 @@ def build_summary(results, risk_only=False):
 
 
 # ============================================================
-# 查询模板管理（增强：相对日期原样保存）
+# 模板管理（增强：保存完整报告配置）
 # ============================================================
 class TemplateManager:
     def __init__(self):
@@ -588,17 +673,11 @@ class TemplateManager:
             json.dump(self.templates, f, ensure_ascii=False, indent=2)
 
     def save(self, name, params):
-        """
-        保存查询模板
-        - 相对日期（today/7days 等）原样保存为字符串，执行时再动态计算
-        - 绝对日期转为字符串保存
-        """
+        """保存完整报告配置模板"""
         save_p = dict(params)
-        # 日期处理：相对日期保留字符串，绝对日期格式化
         for dk in ("date_from", "date_to"):
             if isinstance(save_p.get(dk), datetime):
                 save_p[dk] = save_p[dk].strftime("%Y-%m-%d")
-            # 相对日期本来就是字符串，不需要转换
         self.templates[name] = {
             "params": save_p,
             "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -606,7 +685,6 @@ class TemplateManager:
         self._save()
 
     def load(self, name):
-        """加载查询模板"""
         if name in self.templates:
             return dict(self.templates[name]["params"])
         return None
@@ -623,7 +701,7 @@ class TemplateManager:
 
 
 # ============================================================
-# 结果导出（增强：批量审计分块 + 风险汇总）
+# 结果导出（增强：Markdown 格式 + 交叉分组 + 风险等级）
 # ============================================================
 class Exporter:
     @staticmethod
@@ -648,6 +726,11 @@ class Exporter:
         if summary["risk_total"] > 0:
             lines.append("【高风险记录】")
             lines.append("  风险总数: {} 条".format(summary["risk_total"]))
+            if summary["risk_by_level"]:
+                lines.append("  风险等级分布:")
+                for lvl, info in RISK_LEVELS.items():
+                    if lvl in summary["risk_by_level"]:
+                        lines.append("    {} {}  {} 条".format(info["icon"], info["label"], summary["risk_by_level"][lvl]))
             if summary["risk_by_action"]:
                 lines.append("  风险动作分布:")
                 for a, c in summary["risk_by_action"].most_common():
@@ -663,8 +746,29 @@ class Exporter:
         return lines
 
     @staticmethod
+    def _record_lines(r):
+        lines = []
+        risk_info = ""
+        if r.get("risk_level"):
+            info = RISK_LEVELS[r["risk_level"]]
+            reason = r.get("risk_reason", "")
+            risk_info = "  [{} {}] {}".format(info["icon"], info["label"], reason)
+        lines.append("操作时间: {}".format(r.get("timestamp", "")))
+        lines.append("文件路径: {}".format(r.get("file_path", "")))
+        lines.append("访问动作: {}".format(r.get("action", "")))
+        lines.append("操作者:   {}".format(r.get("user", "")))
+        device = r.get("device", "")
+        ip = r.get("ip", "")
+        if device or ip:
+            lines.append("终端设备: {} ({})".format(device, ip))
+        lines.append("命中原因: {}".format(", ".join(r.get("hit_reasons", []))))
+        if risk_info:
+            lines.append("风险等级: {}".format(risk_info.strip()))
+        return lines
+
+    @staticmethod
     def export_text(results, output_path, summary=None, batch_groups=None):
-        """导出为纯文本（批量分块 + 风险汇总）"""
+        """导出为纯文本"""
         if summary is None:
             summary = build_summary(results)
         with open(output_path, "w", encoding="utf-8") as f:
@@ -673,33 +777,20 @@ class Exporter:
             f.write("=" * 80 + "\n\n")
 
             if batch_groups and len(batch_groups) > 1:
-                # 批量审计分块模式
                 for label, group in batch_groups.items():
                     f.write("\n" + "=" * 80 + "\n")
                     f.write("【{}】共 {} 条\n".format(label, len(group)))
                     f.write("=" * 80 + "\n\n")
                     for i, r in enumerate(group, 1):
-                        f.write("[{}] 操作时间: {}\n".format(i, r.get("timestamp", "")))
-                        f.write("    文件路径: {}\n".format(r.get("file_path", "")))
-                        f.write("    访问动作: {}\n".format(r.get("action", "")))
-                        f.write("    操作者:   {}\n".format(r.get("user", "")))
-                        device = r.get("device", "")
-                        ip = r.get("ip", "")
-                        if device or ip:
-                            f.write("    终端设备: {} ({})\n".format(device, ip))
-                        f.write("    命中原因: {}\n".format(", ".join(r.get("hit_reasons", []))))
+                        f.write("[{}] ".format(i))
+                        lines = Exporter._record_lines(r)
+                        f.write(("\n" + " " * 5).join(lines) + "\n")
                         f.write("-" * 80 + "\n")
             else:
                 for i, r in enumerate(results, 1):
-                    f.write("[{}] 操作时间: {}\n".format(i, r.get("timestamp", "")))
-                    f.write("    文件路径: {}\n".format(r.get("file_path", "")))
-                    f.write("    访问动作: {}\n".format(r.get("action", "")))
-                    f.write("    操作者:   {}\n".format(r.get("user", "")))
-                    device = r.get("device", "")
-                    ip = r.get("ip", "")
-                    if device or ip:
-                        f.write("    终端设备: {} ({})\n".format(device, ip))
-                    f.write("    命中原因: {}\n".format(", ".join(r.get("hit_reasons", []))))
+                    f.write("[{}] ".format(i))
+                    lines = Exporter._record_lines(r)
+                    f.write(("\n" + " " * 5).join(lines) + "\n")
                     f.write("-" * 80 + "\n")
 
             f.write("\n" + "=" * 80 + "\n")
@@ -712,36 +803,33 @@ class Exporter:
 
     @staticmethod
     def export_csv(results, output_path, summary=None, batch_groups=None):
-        """导出为 CSV（批量分块 + 风险汇总）"""
+        """导出为 CSV"""
         if summary is None:
             summary = build_summary(results)
         with open(output_path, "w", encoding="utf-8-sig", newline="") as f:
             writer = csv.writer(f)
 
-            if batch_groups and len(batch_groups) > 1:
-                for label, group in batch_groups.items():
+            def write_group(label, group):
+                if label:
                     writer.writerow(["===== {} ===== (共 {} 条)".format(label, len(group))])
-                    writer.writerow(["序号", "操作时间", "文件路径", "访问动作", "操作者", "IP", "设备", "命中原因"])
-                    for i, r in enumerate(group, 1):
-                        writer.writerow([
-                            i, r.get("timestamp", ""), r.get("file_path", ""),
-                            r.get("action", ""), r.get("user", ""),
-                            r.get("ip", ""), r.get("device", ""),
-                            ", ".join(r.get("hit_reasons", [])),
-                        ])
-                    writer.writerow([])
-            else:
-                writer.writerow(["序号", "操作时间", "文件路径", "访问动作", "操作者", "IP", "设备", "命中原因"])
-                for i, r in enumerate(results, 1):
+                writer.writerow(["序号", "操作时间", "文件路径", "访问动作", "操作者", "IP", "设备", "风险等级", "风险原因", "命中原因"])
+                for i, r in enumerate(group, 1):
+                    risk_label = RISK_LEVELS[r["risk_level"]]["label"] if r.get("risk_level") else ""
                     writer.writerow([
                         i, r.get("timestamp", ""), r.get("file_path", ""),
                         r.get("action", ""), r.get("user", ""),
                         r.get("ip", ""), r.get("device", ""),
+                        risk_label, r.get("risk_reason", ""),
                         ", ".join(r.get("hit_reasons", [])),
                     ])
+                writer.writerow([])
 
-            # 统计汇总
-            writer.writerow([])
+            if batch_groups and len(batch_groups) > 1:
+                for label, group in batch_groups.items():
+                    write_group(label, group)
+            else:
+                write_group(None, results)
+
             writer.writerow(["===== 统计汇总 ====="])
             writer.writerow(["总记录数", summary["total"]])
             if summary["earliest"]:
@@ -764,6 +852,11 @@ class Exporter:
             if summary["risk_total"] > 0:
                 writer.writerow(["高风险记录统计"])
                 writer.writerow(["风险总数", summary["risk_total"]])
+                if summary["risk_by_level"]:
+                    writer.writerow(["风险等级分布"])
+                    for lvl, info in RISK_LEVELS.items():
+                        if lvl in summary["risk_by_level"]:
+                            writer.writerow([info["label"], summary["risk_by_level"][lvl]])
                 if summary["risk_by_action"]:
                     writer.writerow(["风险动作分布"])
                     for a, c in summary["risk_by_action"].most_common():
@@ -777,12 +870,121 @@ class Exporter:
             writer.writerow([])
             writer.writerow(["导出时间", datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
 
+    @staticmethod
+    def export_markdown(results, output_path, summary=None, batch_groups=None):
+        """导出为 Markdown 格式（方便贴工单/周报）"""
+        if summary is None:
+            summary = build_summary(results)
+
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write("# 云盘日志审计报告\n\n")
+            f.write("> 导出时间: {}\n\n".format(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+
+            # 统计汇总（先放前面，周报直接看这部分就行）
+            f.write("## 📊 统计汇总\n\n")
+            f.write("| 指标 | 数值 |\n")
+            f.write("|------|------|\n")
+            f.write("| 总记录数 | {} |\n".format(summary["total"]))
+            if summary["earliest"]:
+                f.write("| 最早访问 | {} |\n".format(summary["earliest"]))
+            if summary["latest"]:
+                f.write("| 最晚访问 | {} |\n".format(summary["latest"]))
+            f.write("\n")
+
+            # 按动作统计
+            if summary["by_action"]:
+                f.write("### 按动作统计\n\n")
+                f.write("| 动作 | 数量 |\n")
+                f.write("|------|------|\n")
+                for action, cnt in summary["by_action"].most_common():
+                    f.write("| {} | {} |\n".format(action, cnt))
+                f.write("\n")
+
+            # 按操作者统计
+            if summary["by_user"]:
+                f.write("### 按操作者统计\n\n")
+                f.write("| 操作者 | 数量 |\n")
+                f.write("|--------|------|\n")
+                for user, cnt in summary["by_user"].most_common():
+                    f.write("| {} | {} |\n".format(user, cnt))
+                f.write("\n")
+
+            # 风险汇总
+            if summary["risk_total"] > 0:
+                f.write("## ⚠️  风险汇总\n\n")
+                f.write("| 指标 | 数值 |\n")
+                f.write("|------|------|\n")
+                f.write("| 风险总数 | {} |\n".format(summary["risk_total"]))
+                if summary["risk_night_count"] > 0:
+                    f.write("| 夜间操作 | {} |\n".format(summary["risk_night_count"]))
+                f.write("\n")
+
+                if summary["risk_by_level"]:
+                    f.write("### 风险等级分布\n\n")
+                    f.write("| 等级 | 图标 | 数量 |\n")
+                    f.write("|------|------|------|\n")
+                    for lvl, info in RISK_LEVELS.items():
+                        if lvl in summary["risk_by_level"]:
+                            f.write("| {} | {} | {} |\n".format(
+                                info["label"], info["icon"], summary["risk_by_level"][lvl]
+                            ))
+                    f.write("\n")
+
+                if summary["risk_by_action"]:
+                    f.write("### 风险动作分布\n\n")
+                    f.write("| 动作 | 数量 |\n")
+                    f.write("|------|------|\n")
+                    for a, c in summary["risk_by_action"].most_common():
+                        f.write("| {} | {} |\n".format(a, c))
+                    f.write("\n")
+
+                if summary["risk_files"]:
+                    f.write("### 涉及文件清单\n\n")
+                    for fp in summary["risk_files"]:
+                        f.write("- `{}`\n".format(fp))
+                    f.write("\n")
+
+            # 明细列表（按分组展示）
+            f.write("## 📋 明细列表\n\n")
+
+            def write_records_md(group_label, group):
+                if group_label:
+                    f.write("### {}\n\n".format(group_label))
+                    f.write("> 本组共 {} 条记录\n\n".format(len(group)))
+                f.write("| # | 操作时间 | 动作 | 操作者 | 文件路径 | 风险等级 | 命中原因 |\n")
+                f.write("|----|----------|------|--------|----------|----------|----------|\n")
+                for i, r in enumerate(group, 1):
+                    risk = ""
+                    if r.get("risk_level"):
+                        info = RISK_LEVELS[r["risk_level"]]
+                        risk = "{} {}".format(info["icon"], info["label"])
+                    f.write("| {} | {} | {} | {} | `{}` | {} | {} |\n".format(
+                        i,
+                        r.get("timestamp", ""),
+                        r.get("action", ""),
+                        r.get("user", ""),
+                        r.get("file_path", ""),
+                        risk,
+                        ", ".join(r.get("hit_reasons", [])),
+                    ))
+                f.write("\n")
+
+            if batch_groups and len(batch_groups) > 1:
+                for label, group in batch_groups.items():
+                    write_records_md(label, group)
+            else:
+                write_records_md(None, results)
+
+            # 页脚
+            f.write("---\n\n")
+            f.write("*本报告由 CloudLog 自动生成*\n")
+
 
 # ============================================================
-# 终端显示格式化（增强：批量分块 + 风险汇总）
+# 终端显示（增强：交叉分组 + 风险等级）
 # ============================================================
-def display_results(results, max_show=50, summary=None, batch_groups=None):
-    """终端展示（批量分块 + 风险汇总）"""
+def display_results(results, max_show=50, summary=None, batch_groups=None, group_mode="auto"):
+    """终端展示（含交叉分组 + 风险等级标注）"""
     if summary is None:
         summary = build_summary(results)
 
@@ -794,11 +996,12 @@ def display_results(results, max_show=50, summary=None, batch_groups=None):
     show_count = min(total, max_show)
 
     if batch_groups and len(batch_groups) > 1:
-        # ===== 批量审计分块模式 =====
         print()
         print("=" * 90)
-        print("  【批量审计】共 {} 组，总 {} 条记录 (每组显示前 {} 条)".format(
-            len(batch_groups), total, max_show
+        mode_desc = {"file": "按文件分组", "user": "按用户分组",
+                     "file+user": "文件×用户交叉分组", "auto": "自动分组"}.get(group_mode, "分组")
+        print("  【批量审计 - {}】共 {} 组，总 {} 条记录 (每组显示前 {} 条)".format(
+            mode_desc, len(batch_groups), total, max_show
         ))
         print("=" * 90)
 
@@ -811,17 +1014,23 @@ def display_results(results, max_show=50, summary=None, batch_groups=None):
             gs = min(len(group), max_show)
             for i, r in enumerate(group[:gs], 1):
                 reasons = " | ".join(r.get("hit_reasons", []))
+                risk_tag = ""
+                if r.get("risk_level"):
+                    info = RISK_LEVELS[r["risk_level"]]
+                    risk_tag = "  [{} {}]".format(info["icon"], info["label"])
                 print()
-                print("  [{:>3}] {}  |  {:>6}  |  {}".format(
-                    i, r.get("timestamp", ""), r.get("action", ""), r.get("user", "")
+                print("  [{:>3}] {}  |  {:>6}  |  {}{}".format(
+                    i, r.get("timestamp", ""), r.get("action", ""), r.get("user", ""), risk_tag
                 ))
                 print("        文件: {}".format(r.get("file_path", "")))
                 print("        命中: {}".format(reasons))
+                if r.get("risk_level"):
+                    reason = r.get("risk_reason", "")
+                    print("        风险: {} - {}".format(RISK_LEVELS[r["risk_level"]]["label"], reason))
 
             if len(group) > gs:
                 print("\n  ... 本组还有 {} 条，详见导出文件".format(len(group) - gs))
     else:
-        # ===== 普通单组模式 =====
         print()
         print("=" * 90)
         print("  检索结果: 共 {} 条记录 (显示前 {} 条)".format(total, show_count))
@@ -829,12 +1038,19 @@ def display_results(results, max_show=50, summary=None, batch_groups=None):
 
         for i, r in enumerate(results[:show_count], 1):
             reasons = " | ".join(r.get("hit_reasons", []))
+            risk_tag = ""
+            if r.get("risk_level"):
+                info = RISK_LEVELS[r["risk_level"]]
+                risk_tag = "  [{} {}]".format(info["icon"], info["label"])
             print()
-            print("  [{:>3}] {}  |  {:>6}  |  {}".format(
-                i, r.get("timestamp", ""), r.get("action", ""), r.get("user", "")
+            print("  [{:>3}] {}  |  {:>6}  |  {}{}".format(
+                i, r.get("timestamp", ""), r.get("action", ""), r.get("user", ""), risk_tag
             ))
             print("        文件: {}".format(r.get("file_path", "")))
             print("        命中: {}".format(reasons))
+            if r.get("risk_level"):
+                reason = r.get("risk_reason", "")
+                print("        风险: {} - {}".format(RISK_LEVELS[r["risk_level"]]["label"], reason))
             print("  " + "-" * 86)
 
         if total > show_count:
@@ -842,7 +1058,7 @@ def display_results(results, max_show=50, summary=None, batch_groups=None):
                 total - show_count, show_count, max_show
             ))
 
-    # ===== 统计汇总 =====
+    # 统计汇总
     print()
     print("  " + "=" * 86)
     print("  【统计汇总】")
@@ -866,7 +1082,13 @@ def display_results(results, max_show=50, summary=None, batch_groups=None):
             print("    ... 共 {} 位操作者，详见导出文件".format(len(summary["by_user"])))
     if summary["risk_total"] > 0:
         print()
-        print("  【⚠ 高风险记录】共 {} 条".format(summary["risk_total"]))
+        print("  【⚠ 风险汇总】共 {} 条".format(summary["risk_total"]))
+        if summary["risk_by_level"]:
+            parts = []
+            for lvl, info in RISK_LEVELS.items():
+                if lvl in summary["risk_by_level"]:
+                    parts.append("{} {} {}条".format(info["icon"], info["label"], summary["risk_by_level"][lvl]))
+            print("  等级分布: {}".format(", ".join(parts)))
         if summary["risk_by_action"]:
             parts = []
             for a, c in summary["risk_by_action"].most_common():
@@ -893,85 +1115,80 @@ def build_parser():
         epilog="""
 示例:
   # 基础查询
-  %(prog)s -f "合同"                          # 按文件关键词查
-  %(prog)s -u "张伟"                          # 按用户查
-  %(prog)s --from 2024-06-01 --to 2024-06-30  # 按时间范围查
+  %(prog)s -f "合同"
+  %(prog)s -u "张伟" --from "7days" --to "today"
 
-  # 批量审计（多关键词分块展示，贴工单方便）
-  %(prog)s -f "合同,报表,项目"                 # 多个文件关键词
-  %(prog)s -u "张伟,李娜,王磊"                 # 多个用户
+  # 批量审计分组
+  %(prog)s -f "合同,报表,项目"                        # 多文件自动分块
+  %(prog)s -u "张伟,李娜,王磊"                        # 多用户自动分块
+  %(prog)s -f "合同,项目" -u "张伟,李娜" --group-by file+user  # 文件×用户交叉分组
+  %(prog)s -f "合同" -u "张伟,李娜" --group-by user           # 指定按用户分
 
-  # 风险视图（外链访问+分享+删除+夜间操作）
-  %(prog)s --risk                              # 只看高风险记录
-  %(prog)s -f "合同" --risk --from "7days"     # 一周内合同文件的风险记录
+  # 风险视图（含等级）
+  %(prog)s --risk                                         # 只看风险记录，显示等级
+  %(prog)s -f "合同" --risk --from "7days" --export risk.md
 
-  # 排序和分页
-  %(prog)s -f "合同" --sort file_path --order asc
-  %(prog)s -f "合同" --skip 20 --head 10
+  # Markdown 导出（贴工单/周报）
+  %(prog)s -f "合同,项目" -u "张伟,李娜" --group-by file+user --export report.md
 
-  # 模板（支持直接写模板名）
-  %(prog)s --save-tpl weekly -f "合同" -a "外链访问" --from "7days" --to "today"
-  %(prog)s weekly                              # 直接运行模板
-  %(prog)s --tpl weekly                        # 或用参数形式
+  # 完整报告模板（保存所有配置）
+  %(prog)s --save-tpl weekly_audit -f "合同,项目" -u "张伟,李娜" --group-by file+user --risk --export weekly.md --limit 20
+  %(prog)s weekly_audit                                    # 直接按配置跑报告
 
-  # 导出
-  %(prog)s -f "合同,报表" --export batch.csv
-  %(prog)s --risk --export risk_report.txt
+  # 模板简化入口
+  %(prog)s weekly_audit          # 直接写模板名
+  %(prog)s --tpl weekly_audit    # 或用参数形式
         """,
     )
 
     # 数据源
-    parser.add_argument("-i", "--input", metavar="PATH", help="指定本地日志文件路径（支持 .csv / .jsonl）")
-    parser.add_argument(
-        "-m", "--map", dest="field_map", metavar="MAP",
-        help="字段映射，格式: '源字段=标准字段,...'  标准字段: timestamp,file_path,action,user,ip,device",
-    )
+    parser.add_argument("-i", "--input", metavar="PATH", help="指定本地日志文件路径")
+    parser.add_argument("-m", "--map", dest="field_map", metavar="MAP",
+                        help="字段映射: '源字段=标准字段,...' 标准字段: timestamp,file_path,action,user,ip,device")
 
-    # 三大查询方式（支持逗号分隔多值用于批量审计）
-    parser.add_argument("-f", "--file", help="文件关键词搜索，多个用逗号分隔（批量审计自动分块）")
-    parser.add_argument("-u", "--user", help="用户关键词搜索，多个用逗号分隔（批量审计自动分块）")
+    # 查询条件（支持逗号多值）
+    parser.add_argument("-f", "--file", help="文件关键词，多个用逗号分隔")
+    parser.add_argument("-u", "--user", help="用户关键词，多个用逗号分隔")
     parser.add_argument("--from", dest="date_from", help="起始日期 (YYYY-MM-DD, today, 7days)")
-    parser.add_argument("--to", dest="date_to", help="结束日期 (YYYY-MM-DD, today)，按自然日包含全天")
-
-    # 动作筛选
-    parser.add_argument(
-        "-a", "--action",
-        help="动作条件筛选，多个用逗号分隔。支持: {}".format(", ".join(ACTIONS)),
-    )
+    parser.add_argument("--to", dest="date_to", help="结束日期，按自然日包含全天")
+    parser.add_argument("-a", "--action", help="动作筛选，多个逗号分隔。支持: {}".format(", ".join(ACTIONS)))
 
     # 风险视图
+    parser.add_argument("--risk", action="store_true",
+                        help="风险视图：只看风险记录，自动评估高/中/低等级并标注原因")
+
+    # 分组方式
     parser.add_argument(
-        "--risk", action="store_true",
-        help="风险视图：只看高风险记录（外链访问/分享/删除 + 夜间 00:00-06:00），汇总单独列出",
+        "--group-by", dest="group_mode", default="auto",
+        choices=GROUP_MODES,
+        help="批量审计分组方式: auto(自动,默认) | file(按文件) | user(按用户) | file+user(交叉) | none(不分块)",
     )
 
     # 排序
-    parser.add_argument(
-        "--sort", dest="sort_by", default="timestamp",
-        choices=["timestamp", "file_path", "user", "action"],
-        help="排序字段 (默认: timestamp)",
-    )
-    parser.add_argument(
-        "--order", default="desc", choices=["asc", "desc"],
-        help="排序方向: asc=升序, desc=降序 (默认: desc)",
-    )
+    parser.add_argument("--sort", dest="sort_by", default="timestamp",
+                        choices=["timestamp", "file_path", "user", "action"],
+                        help="排序字段 (默认: timestamp)")
+    parser.add_argument("--order", default="desc", choices=["asc", "desc"],
+                        help="排序方向 (默认: desc)")
 
     # 分页
-    parser.add_argument("--skip", type=int, default=0, help="跳过前 N 条记录 (默认: 0)")
-    parser.add_argument("--head", type=int, default=None, help="只取前 N 条记录（默认全部）")
+    parser.add_argument("--skip", type=int, default=0, help="跳过前 N 条")
+    parser.add_argument("--head", type=int, default=None, help="只取前 N 条")
 
-    # 模板功能
-    parser.add_argument("--tpl", metavar="NAME", help="使用已保存的查询模板")
-    parser.add_argument("--save-tpl", metavar="NAME", help="将当前查询条件保存为模板（相对日期动态计算）")
-    parser.add_argument("--list-tpl", action="store_true", help="列出所有查询模板")
-    parser.add_argument("--del-tpl", metavar="NAME", help="删除指定查询模板")
+    # 模板
+    parser.add_argument("--tpl", metavar="NAME", help="使用已保存的报告模板")
+    parser.add_argument("--save-tpl", metavar="NAME",
+                        help="保存完整报告配置为模板（分组/风险/导出/条数等全部保存）")
+    parser.add_argument("--list-tpl", action="store_true", help="列出所有报告模板")
+    parser.add_argument("--del-tpl", metavar="NAME", help="删除指定报告模板")
 
-    # 导出
-    parser.add_argument("--export", metavar="PATH", help="导出结果到文件 (.txt 或 .csv)，含批量分块和风险汇总")
+    # 导出（新增 Markdown 格式）
+    parser.add_argument("--export", metavar="PATH",
+                        help="导出到文件，根据后缀识别格式: .txt / .csv / .md")
     parser.add_argument("--limit", type=int, default=50, help="终端显示条数上限 (默认: 50)")
 
     # 数据管理
-    parser.add_argument("--gen-mock", type=int, metavar="N", help="生成 N 条模拟日志数据（含混合时间格式）")
+    parser.add_argument("--gen-mock", type=int, metavar="N", help="生成 N 条模拟日志（含混合时间格式）")
     parser.add_argument("--gen-mock-csv", type=int, metavar="N", help="生成 N 条模拟日志（CSV 格式）")
     parser.add_argument("--log-path", action="store_true", help="显示默认日志文件路径")
 
@@ -982,7 +1199,7 @@ def build_parser():
 
 
 # ============================================================
-# 模板描述辅助
+# 模板描述
 # ============================================================
 def describe_template_params(params):
     parts = []
@@ -998,6 +1215,8 @@ def describe_template_params(params):
         parts.append("动作=[{}]".format(",".join(params["actions"])))
     if params.get("risk_only"):
         parts.append("风险视图")
+    if params.get("group_mode") and params["group_mode"] != "auto":
+        parts.append("分组={}".format(params["group_mode"]))
     if params.get("sort_by"):
         parts.append("排序={}:{}".format(params["sort_by"], params.get("sort_order", "desc")))
     if params.get("skip"):
@@ -1006,6 +1225,8 @@ def describe_template_params(params):
         parts.append("取前={}".format(params["head"]))
     if params.get("export_path"):
         parts.append("导出={}".format(params["export_path"]))
+    if params.get("limit") and params["limit"] != 50:
+        parts.append("显示上限={}".format(params["limit"]))
     return " | ".join(parts) if parts else "(空)"
 
 
@@ -1016,15 +1237,13 @@ def main():
     parser = build_parser()
     args = parser.parse_args()
 
-    # ===== 模板简化入口：位置参数直接是模板名 =====
+    # ===== 模板简化入口 =====
     if args.template_name_pos:
         tm = TemplateManager()
         tpl = tm.load(args.template_name_pos)
         if tpl is not None:
-            # 优先走模板路径：把位置参数填到 --tpl 上
             args.tpl = args.template_name_pos
         else:
-            # 不是模板名，也没其他参数：提示
             has_other = any([
                 args.file, args.user, args.date_from, args.date_to,
                 args.action, args.risk, args.export, args.input,
@@ -1042,10 +1261,10 @@ def main():
         tm = TemplateManager()
         tpls = tm.list()
         if not tpls:
-            print("\n[信息] 暂无保存的查询模板。\n")
+            print("\n[信息] 暂无保存的报告模板。\n")
         else:
             print("\n" + "=" * 80)
-            print("  已保存的查询模板（直接输入模板名即可运行）")
+            print("  已保存的报告模板（直接输入模板名即可运行）")
             print("=" * 80)
             for name, data in sorted(tpls.items()):
                 desc = describe_template_params(data["params"])
@@ -1065,13 +1284,13 @@ def main():
 
     if args.gen_mock:
         count = generate_mock_logs(args.gen_mock)
-        print("\n[完成] 已生成 {} 条模拟日志数据 (JSONL，含混合时间格式): {}\n".format(count, LOG_FILE))
+        print("\n[完成] 已生成 {} 条模拟日志 (JSONL，含混合时间格式): {}\n".format(count, LOG_FILE))
         return
 
     if args.gen_mock_csv:
         csv_path = LOG_DIR / "audit_log.csv"
         count = generate_mock_logs(args.gen_mock_csv, csv_path)
-        print("\n[完成] 已生成 {} 条模拟日志数据 (CSV): {}\n".format(count, csv_path))
+        print("\n[完成] 已生成 {} 条模拟日志 (CSV): {}\n".format(count, csv_path))
         return
 
     if args.log_path:
@@ -1086,6 +1305,7 @@ def main():
         "date_to": None,
         "actions": None,
         "risk_only": False,
+        "group_mode": "auto",
         "sort_by": "timestamp",
         "sort_order": "desc",
         "skip": 0,
@@ -1096,7 +1316,7 @@ def main():
         "limit": 50,
     }
 
-    # 优先使用模板（完整覆盖参数）
+    # 优先使用模板（完整覆盖所有参数）
     if args.tpl:
         tm = TemplateManager()
         tpl_params = tm.load(args.tpl)
@@ -1107,7 +1327,11 @@ def main():
             print("\n[错误] 模板 '{}' 不存在，使用 --list-tpl 查看可用模板\n".format(args.tpl))
             sys.exit(1)
 
-    # 命令行参数覆盖模板
+    # 判断用户是否在命令行显式指定了某个参数（而非使用默认值）
+    def is_explicitly_set(argname):
+        return getattr(args, argname) != parser.get_default(argname)
+
+    # 命令行参数覆盖模板（只有显式指定的才覆盖）
     if args.input:
         params["input_path"] = args.input
     if args.field_map:
@@ -1116,13 +1340,15 @@ def main():
         params["file_keyword"] = args.file
     if args.user:
         params["user_keyword"] = args.user
-    if args.risk:
+    if is_explicitly_set("risk") and args.risk:
         params["risk_only"] = True
+    if is_explicitly_set("group_mode"):
+        params["group_mode"] = args.group_mode
 
-    # 日期处理：相对日期保留字符串，绝对日期转 datetime
+    # 日期处理：相对日期保留字符串
     if args.date_from:
         if is_relative_date(args.date_from):
-            params["date_from"] = args.date_from  # 保留原样
+            params["date_from"] = args.date_from
         else:
             try:
                 params["date_from"] = parse_date(args.date_from, end_of_day=False)
@@ -1132,7 +1358,7 @@ def main():
 
     if args.date_to:
         if is_relative_date(args.date_to):
-            params["date_to"] = args.date_to  # 保留原样
+            params["date_to"] = args.date_to
         else:
             try:
                 params["date_to"] = parse_date(args.date_to, end_of_day=True)
@@ -1140,7 +1366,7 @@ def main():
                 print("\n[错误] {}\n".format(e))
                 sys.exit(1)
 
-    if args.action:
+    if is_explicitly_set("action") and args.action:
         action_list = [a.strip() for a in args.action.split(",")]
         invalid = [a for a in action_list if a not in ACTIONS]
         if invalid:
@@ -1149,24 +1375,24 @@ def main():
             sys.exit(1)
         params["actions"] = action_list
 
-    if args.sort_by:
+    if is_explicitly_set("sort_by"):
         params["sort_by"] = args.sort_by
-    if args.order:
+    if is_explicitly_set("order"):
         params["sort_order"] = args.order
-    if args.skip:
+    if is_explicitly_set("skip"):
         params["skip"] = args.skip
     if args.head is not None:
         params["head"] = args.head
     if args.export:
         params["export_path"] = args.export
-    if args.limit:
+    if is_explicitly_set("limit"):
         params["limit"] = args.limit
 
-    # 保存模板（相对日期保持字符串）
+    # 保存完整报告模板
     if args.save_tpl:
         tm = TemplateManager()
         tm.save(args.save_tpl, params)
-        print("\n[成功] 已保存模板 '{}'（相对日期将在每次执行时动态计算）\n".format(args.save_tpl))
+        print("\n[成功] 已保存报告模板 '{}'（含分组/风险/导出/显示条数等完整配置）\n".format(args.save_tpl))
 
     # 如果没有任何查询条件，显示帮助
     has_query = any([
@@ -1194,7 +1420,6 @@ def main():
     # ===== 执行查询 =====
     searcher = LogSearcher(records)
 
-    # 日期动态计算（模板中的相对日期字符串在这里解析）
     search_date_from = params["date_from"]
     search_date_to = params["date_to"]
     if isinstance(search_date_from, str):
@@ -1223,17 +1448,18 @@ def main():
     # 分页
     results = searcher.paginate(results, params["skip"], params["head"])
 
-    # 批量审计分组
+    # 构建分组（根据 group_mode）
     batch_groups = build_batch_groups(
         results,
         file_keyword=params["file_keyword"],
         user_keyword=params["user_keyword"],
+        group_mode=params["group_mode"],
     )
 
-    # 统计汇总（含风险）
+    # 统计汇总
     summary = build_summary(results, risk_only=params["risk_only"])
 
-    # ===== 显示查询条件摘要 =====
+    # ===== 显示查询条件 =====
     print()
     cond_parts = []
     if params["file_keyword"]:
@@ -1248,6 +1474,8 @@ def main():
         cond_parts.append("动作=[{}]".format(", ".join(params["actions"])))
     if params["risk_only"]:
         cond_parts.append("风险视图=开")
+    if params["group_mode"] and params["group_mode"] != "none":
+        cond_parts.append("分组={}".format(params["group_mode"]))
     sort_desc = "{}:{}".format(params["sort_by"], params["sort_order"])
     cond_parts.append("排序={}".format(sort_desc))
     if params["skip"] or params["head"]:
@@ -1260,6 +1488,7 @@ def main():
         max_show=params["limit"],
         summary=summary,
         batch_groups=batch_groups,
+        group_mode=params["group_mode"],
     )
 
     # ===== 导出 =====
@@ -1271,6 +1500,9 @@ def main():
         if suffix == ".csv":
             Exporter.export_csv(results, output_path, summary, batch_groups)
             fmt = "CSV 表格"
+        elif suffix == ".md":
+            Exporter.export_markdown(results, output_path, summary, batch_groups)
+            fmt = "Markdown"
         else:
             if suffix != ".txt":
                 output_path = output_path.with_suffix(".txt")

@@ -1,21 +1,22 @@
 {
-  "weekly_risk": {
+  "weekly_audit": {
     "params": {
-      "file_keyword": null,
-      "user_keyword": null,
+      "file_keyword": "合同,项目,数据",
+      "user_keyword": "张伟,李娜,王磊",
       "date_from": "7days",
       "date_to": "today",
       "actions": null,
       "risk_only": true,
+      "group_mode": "file+user",
       "sort_by": "timestamp",
       "sort_order": "desc",
       "skip": 0,
       "head": null,
       "input_path": null,
       "field_map": null,
-      "export_path": "weekly_risk_report.csv",
-      "limit": 50
+      "export_path": "weekly_audit.md",
+      "limit": 20
     },
-    "created_at": "2026-06-22 06:34:55"
+    "created_at": "2026-06-22 06:46:53"
   }
 }
