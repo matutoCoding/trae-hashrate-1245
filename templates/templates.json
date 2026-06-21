@@ -3,12 +3,20 @@
     "params": {
       "file_keyword": "合同",
       "user_keyword": null,
-      "date_from": null,
-      "date_to": null,
+      "date_from": "2026-06-22",
+      "date_to": "2026-06-22",
       "actions": [
         "外链访问"
-      ]
+      ],
+      "sort_by": "timestamp",
+      "sort_order": "desc",
+      "skip": 0,
+      "head": null,
+      "input_path": null,
+      "field_map": null,
+      "export_path": "daily_contract_report.csv",
+      "limit": 50
     },
-    "created_at": "2026-06-22 06:15:51"
+    "created_at": "2026-06-22 06:26:02"
   }
 }
