@@ -1,0 +1,500 @@
+{"timestamp": "2026-06-22 05:39:42", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "下载", "user": "陈超(chenchao)", "ip": "192.168.35.8", "device": "Web"}
+{"timestamp": "2026-06-22 04:18:09", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.77.78", "device": "iPhone"}
+{"timestamp": "2026-06-22 03:28:07", "file_path": "/开发文档/API接口文档V2.0.md", "action": "编辑", "user": "郑雪(zhengxue)", "ip": "192.168.241.54", "device": "MacBook"}
+{"timestamp": "2026-06-22 02:44:35", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "上传", "user": "李娜(lina)", "ip": "192.168.133.223", "device": "Web"}
+{"timestamp": "2026-06-22 01:28:30", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "移动", "user": "陈超(chenchao)", "ip": "192.168.9.191", "device": "Windows PC"}
+{"timestamp": "2026-06-22 01:23:12", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "删除", "user": "张伟(zhangwei)", "ip": "192.168.141.174", "device": "Windows PC"}
+{"timestamp": "2026-06-22 00:16:47", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "上传", "user": "张伟(zhangwei)", "ip": "192.168.199.99", "device": "Android"}
+{"timestamp": "2026-06-21 23:56:15", "file_path": "/开发文档/数据库设计.sql", "action": "移动", "user": "周静(zhoujing)", "ip": "192.168.196.252", "device": "Windows PC"}
+{"timestamp": "2026-06-21 22:46:13", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "重命名", "user": "刘芳(liufang)", "ip": "192.168.71.199", "device": "MacBook"}
+{"timestamp": "2026-06-21 21:48:24", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "编辑", "user": "李娜(lina)", "ip": "192.168.225.103", "device": "Android"}
+{"timestamp": "2026-06-21 21:46:23", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "外链访问", "user": "李娜(lina)", "ip": "192.168.160.44", "device": "Web"}
+{"timestamp": "2026-06-21 21:33:13", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "分享", "user": "郑雪(zhengxue)", "ip": "192.168.154.189", "device": "Android"}
+{"timestamp": "2026-06-21 18:59:53", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "删除", "user": "张伟(zhangwei)", "ip": "192.168.40.78", "device": "Web"}
+{"timestamp": "2026-06-21 18:10:58", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "移动", "user": "刘芳(liufang)", "ip": "192.168.31.176", "device": "Web"}
+{"timestamp": "2026-06-21 16:06:23", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "上传", "user": "郑雪(zhengxue)", "ip": "192.168.150.212", "device": "Android"}
+{"timestamp": "2026-06-21 15:25:42", "file_path": "/开发文档/API接口文档V2.0.md", "action": "上传", "user": "吴磊(wulei)", "ip": "192.168.225.138", "device": "Web"}
+{"timestamp": "2026-06-21 14:21:55", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.100.125", "device": "Android"}
+{"timestamp": "2026-06-21 13:34:40", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "重命名", "user": "陈超(chenchao)", "ip": "192.168.46.14", "device": "Android"}
+{"timestamp": "2026-06-21 10:51:29", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "删除", "user": "陈超(chenchao)", "ip": "192.168.110.127", "device": "Android"}
+{"timestamp": "2026-06-21 10:02:50", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "查看", "user": "李娜(lina)", "ip": "192.168.83.68", "device": "Android"}
+{"timestamp": "2026-06-21 08:03:10", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "移动", "user": "吴磊(wulei)", "ip": "192.168.103.55", "device": "Windows PC"}
+{"timestamp": "2026-06-21 07:09:49", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "外链访问", "user": "赵敏(zhaomin)", "ip": "192.168.168.140", "device": "Web"}
+{"timestamp": "2026-06-21 06:02:52", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.113.249", "device": "Web"}
+{"timestamp": "2026-06-21 05:40:57", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "外链访问", "user": "陈超(chenchao)", "ip": "192.168.20.97", "device": "iPhone"}
+{"timestamp": "2026-06-21 04:28:09", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.40.19", "device": "iPhone"}
+{"timestamp": "2026-06-21 03:21:32", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "下载", "user": "孙浩(sunhao)", "ip": "192.168.233.111", "device": "iPhone"}
+{"timestamp": "2026-06-21 03:19:15", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "查看", "user": "张伟(zhangwei)", "ip": "192.168.100.248", "device": "Android"}
+{"timestamp": "2026-06-21 03:08:51", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "重命名", "user": "孙浩(sunhao)", "ip": "192.168.176.49", "device": "MacBook"}
+{"timestamp": "2026-06-21 00:19:44", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "外链访问", "user": "孙浩(sunhao)", "ip": "192.168.205.218", "device": "iPhone"}
+{"timestamp": "2026-06-20 23:48:05", "file_path": "/开发文档/API接口文档V2.0.md", "action": "上传", "user": "孙浩(sunhao)", "ip": "192.168.6.192", "device": "MacBook"}
+{"timestamp": "2026-06-20 21:42:38", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "移动", "user": "孙浩(sunhao)", "ip": "192.168.137.218", "device": "Android"}
+{"timestamp": "2026-06-20 21:25:29", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "上传", "user": "吴磊(wulei)", "ip": "192.168.124.148", "device": "iPhone"}
+{"timestamp": "2026-06-20 21:09:58", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "重命名", "user": "刘芳(liufang)", "ip": "192.168.157.100", "device": "Web"}
+{"timestamp": "2026-06-20 19:34:23", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "重命名", "user": "赵敏(zhaomin)", "ip": "192.168.22.27", "device": "Windows PC"}
+{"timestamp": "2026-06-20 16:56:42", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "移动", "user": "刘芳(liufang)", "ip": "192.168.90.200", "device": "Windows PC"}
+{"timestamp": "2026-06-20 15:39:22", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "编辑", "user": "王磊(wanglei)", "ip": "192.168.241.62", "device": "Web"}
+{"timestamp": "2026-06-20 11:06:42", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "移动", "user": "李娜(lina)", "ip": "192.168.243.99", "device": "Web"}
+{"timestamp": "2026-06-20 09:30:48", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "复制", "user": "吴磊(wulei)", "ip": "192.168.153.165", "device": "MacBook"}
+{"timestamp": "2026-06-20 09:18:06", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.45.157", "device": "Windows PC"}
+{"timestamp": "2026-06-20 07:11:35", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.61.184", "device": "Web"}
+{"timestamp": "2026-06-20 06:24:41", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "外链访问", "user": "周静(zhoujing)", "ip": "192.168.250.224", "device": "Web"}
+{"timestamp": "2026-06-20 06:01:26", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "删除", "user": "刘芳(liufang)", "ip": "192.168.129.173", "device": "MacBook"}
+{"timestamp": "2026-06-20 04:24:16", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "编辑", "user": "孙浩(sunhao)", "ip": "192.168.46.86", "device": "Web"}
+{"timestamp": "2026-06-20 02:16:15", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "查看", "user": "张伟(zhangwei)", "ip": "192.168.140.125", "device": "Web"}
+{"timestamp": "2026-06-20 02:11:34", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "外链访问", "user": "郑雪(zhengxue)", "ip": "192.168.51.18", "device": "Web"}
+{"timestamp": "2026-06-20 01:25:25", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "查看", "user": "吴磊(wulei)", "ip": "192.168.103.209", "device": "Web"}
+{"timestamp": "2026-06-20 01:24:39", "file_path": "/开发文档/API接口文档V2.0.md", "action": "查看", "user": "陈超(chenchao)", "ip": "192.168.224.122", "device": "Web"}
+{"timestamp": "2026-06-20 00:50:23", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "复制", "user": "张伟(zhangwei)", "ip": "192.168.25.50", "device": "Android"}
+{"timestamp": "2026-06-20 00:15:27", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "查看", "user": "赵敏(zhaomin)", "ip": "192.168.212.97", "device": "Android"}
+{"timestamp": "2026-06-19 23:15:03", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "查看", "user": "孙浩(sunhao)", "ip": "192.168.182.63", "device": "Web"}
+{"timestamp": "2026-06-19 23:08:45", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "删除", "user": "陈超(chenchao)", "ip": "192.168.204.243", "device": "MacBook"}
+{"timestamp": "2026-06-19 19:51:35", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "上传", "user": "赵敏(zhaomin)", "ip": "192.168.78.193", "device": "Windows PC"}
+{"timestamp": "2026-06-19 12:11:29", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "编辑", "user": "李娜(lina)", "ip": "192.168.168.73", "device": "Android"}
+{"timestamp": "2026-06-19 11:42:29", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.169.58", "device": "MacBook"}
+{"timestamp": "2026-06-19 11:34:41", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "外链访问", "user": "张伟(zhangwei)", "ip": "192.168.112.125", "device": "Windows PC"}
+{"timestamp": "2026-06-19 07:13:27", "file_path": "/开发文档/数据库设计.sql", "action": "编辑", "user": "周静(zhoujing)", "ip": "192.168.172.159", "device": "MacBook"}
+{"timestamp": "2026-06-19 03:58:23", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "外链访问", "user": "李娜(lina)", "ip": "192.168.239.64", "device": "Android"}
+{"timestamp": "2026-06-19 02:02:29", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "上传", "user": "赵敏(zhaomin)", "ip": "192.168.50.83", "device": "Android"}
+{"timestamp": "2026-06-18 23:07:29", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "分享", "user": "王磊(wanglei)", "ip": "192.168.213.122", "device": "iPhone"}
+{"timestamp": "2026-06-18 23:03:30", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "查看", "user": "陈超(chenchao)", "ip": "192.168.121.237", "device": "iPhone"}
+{"timestamp": "2026-06-18 18:35:21", "file_path": "/开发文档/API接口文档V2.0.md", "action": "重命名", "user": "赵敏(zhaomin)", "ip": "192.168.230.86", "device": "MacBook"}
+{"timestamp": "2026-06-18 17:43:47", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.188.93", "device": "iPhone"}
+{"timestamp": "2026-06-18 14:59:27", "file_path": "/开发文档/数据库设计.sql", "action": "查看", "user": "吴磊(wulei)", "ip": "192.168.109.96", "device": "MacBook"}
+{"timestamp": "2026-06-18 13:59:40", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "移动", "user": "吴磊(wulei)", "ip": "192.168.100.157", "device": "Web"}
+{"timestamp": "2026-06-18 13:31:19", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "分享", "user": "周静(zhoujing)", "ip": "192.168.60.218", "device": "iPhone"}
+{"timestamp": "2026-06-18 13:17:27", "file_path": "/开发文档/API接口文档V2.0.md", "action": "查看", "user": "赵敏(zhaomin)", "ip": "192.168.221.156", "device": "Android"}
+{"timestamp": "2026-06-18 05:52:51", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "移动", "user": "李娜(lina)", "ip": "192.168.152.184", "device": "Android"}
+{"timestamp": "2026-06-18 04:20:41", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "查看", "user": "刘芳(liufang)", "ip": "192.168.23.189", "device": "Android"}
+{"timestamp": "2026-06-18 03:45:22", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "复制", "user": "郑雪(zhengxue)", "ip": "192.168.77.38", "device": "iPhone"}
+{"timestamp": "2026-06-18 00:38:43", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.117.119", "device": "Android"}
+{"timestamp": "2026-06-17 22:07:03", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "查看", "user": "王磊(wanglei)", "ip": "192.168.63.165", "device": "Android"}
+{"timestamp": "2026-06-17 19:06:15", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "分享", "user": "孙浩(sunhao)", "ip": "192.168.201.13", "device": "MacBook"}
+{"timestamp": "2026-06-17 18:33:48", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "重命名", "user": "吴磊(wulei)", "ip": "192.168.57.182", "device": "Windows PC"}
+{"timestamp": "2026-06-17 16:51:33", "file_path": "/开发文档/数据库设计.sql", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.205.172", "device": "Web"}
+{"timestamp": "2026-06-17 16:24:55", "file_path": "/开发文档/数据库设计.sql", "action": "重命名", "user": "王磊(wanglei)", "ip": "192.168.38.234", "device": "MacBook"}
+{"timestamp": "2026-06-17 16:12:42", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "重命名", "user": "李娜(lina)", "ip": "192.168.100.73", "device": "MacBook"}
+{"timestamp": "2026-06-17 15:42:41", "file_path": "/开发文档/API接口文档V2.0.md", "action": "下载", "user": "赵敏(zhaomin)", "ip": "192.168.165.63", "device": "iPhone"}
+{"timestamp": "2026-06-17 13:27:19", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "重命名", "user": "李娜(lina)", "ip": "192.168.148.80", "device": "iPhone"}
+{"timestamp": "2026-06-17 11:24:30", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "查看", "user": "刘芳(liufang)", "ip": "192.168.36.139", "device": "Windows PC"}
+{"timestamp": "2026-06-17 09:11:49", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "移动", "user": "李娜(lina)", "ip": "192.168.2.155", "device": "Windows PC"}
+{"timestamp": "2026-06-17 08:53:11", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "查看", "user": "张伟(zhangwei)", "ip": "192.168.118.244", "device": "Web"}
+{"timestamp": "2026-06-17 08:30:46", "file_path": "/开发文档/API接口文档V2.0.md", "action": "分享", "user": "赵敏(zhaomin)", "ip": "192.168.107.171", "device": "Android"}
+{"timestamp": "2026-06-17 07:49:19", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "外链访问", "user": "郑雪(zhengxue)", "ip": "192.168.98.224", "device": "Windows PC"}
+{"timestamp": "2026-06-17 06:47:37", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "删除", "user": "李娜(lina)", "ip": "192.168.45.10", "device": "iPhone"}
+{"timestamp": "2026-06-17 02:28:06", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "编辑", "user": "吴磊(wulei)", "ip": "192.168.96.218", "device": "iPhone"}
+{"timestamp": "2026-06-17 00:47:35", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "分享", "user": "张伟(zhangwei)", "ip": "192.168.187.83", "device": "Windows PC"}
+{"timestamp": "2026-06-17 00:02:21", "file_path": "/开发文档/API接口文档V2.0.md", "action": "删除", "user": "刘芳(liufang)", "ip": "192.168.98.177", "device": "Web"}
+{"timestamp": "2026-06-16 23:09:19", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "上传", "user": "郑雪(zhengxue)", "ip": "192.168.31.155", "device": "Windows PC"}
+{"timestamp": "2026-06-16 23:05:21", "file_path": "/开发文档/API接口文档V2.0.md", "action": "分享", "user": "刘芳(liufang)", "ip": "192.168.79.78", "device": "Android"}
+{"timestamp": "2026-06-16 22:01:54", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "重命名", "user": "李娜(lina)", "ip": "192.168.218.18", "device": "Android"}
+{"timestamp": "2026-06-16 19:16:46", "file_path": "/开发文档/API接口文档V2.0.md", "action": "复制", "user": "张伟(zhangwei)", "ip": "192.168.37.133", "device": "iPhone"}
+{"timestamp": "2026-06-16 17:16:20", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "查看", "user": "郑雪(zhengxue)", "ip": "192.168.37.254", "device": "Web"}
+{"timestamp": "2026-06-16 15:59:04", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "复制", "user": "郑雪(zhengxue)", "ip": "192.168.90.59", "device": "iPhone"}
+{"timestamp": "2026-06-16 14:08:07", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "删除", "user": "孙浩(sunhao)", "ip": "192.168.80.153", "device": "iPhone"}
+{"timestamp": "2026-06-16 13:09:24", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.69.55", "device": "MacBook"}
+{"timestamp": "2026-06-16 11:17:52", "file_path": "/开发文档/数据库设计.sql", "action": "删除", "user": "陈超(chenchao)", "ip": "192.168.203.186", "device": "MacBook"}
+{"timestamp": "2026-06-16 09:37:23", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "移动", "user": "李娜(lina)", "ip": "192.168.24.161", "device": "MacBook"}
+{"timestamp": "2026-06-16 08:55:11", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.148.16", "device": "Web"}
+{"timestamp": "2026-06-16 08:40:40", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.225.41", "device": "Android"}
+{"timestamp": "2026-06-16 08:33:17", "file_path": "/开发文档/API接口文档V2.0.md", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.128.124", "device": "MacBook"}
+{"timestamp": "2026-06-16 06:57:16", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "分享", "user": "王磊(wanglei)", "ip": "192.168.242.202", "device": "iPhone"}
+{"timestamp": "2026-06-16 05:43:29", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "删除", "user": "张伟(zhangwei)", "ip": "192.168.117.78", "device": "Web"}
+{"timestamp": "2026-06-16 03:22:38", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "编辑", "user": "孙浩(sunhao)", "ip": "192.168.65.75", "device": "MacBook"}
+{"timestamp": "2026-06-16 02:03:03", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.168.143", "device": "Web"}
+{"timestamp": "2026-06-15 19:30:56", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "外链访问", "user": "赵敏(zhaomin)", "ip": "192.168.35.71", "device": "Android"}
+{"timestamp": "2026-06-15 18:45:32", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "外链访问", "user": "郑雪(zhengxue)", "ip": "192.168.125.55", "device": "MacBook"}
+{"timestamp": "2026-06-15 16:32:09", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "编辑", "user": "陈超(chenchao)", "ip": "192.168.60.228", "device": "Windows PC"}
+{"timestamp": "2026-06-15 13:44:16", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.31.242", "device": "iPhone"}
+{"timestamp": "2026-06-15 12:38:58", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "下载", "user": "赵敏(zhaomin)", "ip": "192.168.167.216", "device": "MacBook"}
+{"timestamp": "2026-06-15 10:28:49", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "上传", "user": "周静(zhoujing)", "ip": "192.168.158.1", "device": "iPhone"}
+{"timestamp": "2026-06-15 10:28:26", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "编辑", "user": "李娜(lina)", "ip": "192.168.61.151", "device": "MacBook"}
+{"timestamp": "2026-06-15 06:56:45", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "外链访问", "user": "赵敏(zhaomin)", "ip": "192.168.254.130", "device": "Web"}
+{"timestamp": "2026-06-15 04:01:55", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "删除", "user": "李娜(lina)", "ip": "192.168.86.36", "device": "Web"}
+{"timestamp": "2026-06-15 02:17:32", "file_path": "/开发文档/数据库设计.sql", "action": "重命名", "user": "孙浩(sunhao)", "ip": "192.168.94.218", "device": "Windows PC"}
+{"timestamp": "2026-06-14 22:20:20", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "重命名", "user": "周静(zhoujing)", "ip": "192.168.150.60", "device": "iPhone"}
+{"timestamp": "2026-06-14 19:10:17", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.87.60", "device": "Android"}
+{"timestamp": "2026-06-14 18:27:06", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "分享", "user": "刘芳(liufang)", "ip": "192.168.224.32", "device": "iPhone"}
+{"timestamp": "2026-06-14 12:28:14", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "查看", "user": "王磊(wanglei)", "ip": "192.168.201.149", "device": "iPhone"}
+{"timestamp": "2026-06-14 12:19:03", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "重命名", "user": "王磊(wanglei)", "ip": "192.168.163.48", "device": "MacBook"}
+{"timestamp": "2026-06-14 11:58:20", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "下载", "user": "刘芳(liufang)", "ip": "192.168.243.166", "device": "Android"}
+{"timestamp": "2026-06-14 10:43:21", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "编辑", "user": "郑雪(zhengxue)", "ip": "192.168.201.16", "device": "Android"}
+{"timestamp": "2026-06-14 10:27:25", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "分享", "user": "李娜(lina)", "ip": "192.168.101.34", "device": "iPhone"}
+{"timestamp": "2026-06-14 08:39:13", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "删除", "user": "孙浩(sunhao)", "ip": "192.168.248.172", "device": "Android"}
+{"timestamp": "2026-06-14 07:41:54", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "重命名", "user": "张伟(zhangwei)", "ip": "192.168.217.46", "device": "MacBook"}
+{"timestamp": "2026-06-14 04:07:46", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "重命名", "user": "孙浩(sunhao)", "ip": "192.168.12.151", "device": "Android"}
+{"timestamp": "2026-06-14 02:58:05", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "重命名", "user": "李娜(lina)", "ip": "192.168.51.97", "device": "iPhone"}
+{"timestamp": "2026-06-14 02:11:51", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.253.194", "device": "MacBook"}
+{"timestamp": "2026-06-14 00:54:41", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "分享", "user": "张伟(zhangwei)", "ip": "192.168.44.238", "device": "Windows PC"}
+{"timestamp": "2026-06-13 18:58:32", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "查看", "user": "李娜(lina)", "ip": "192.168.198.127", "device": "Web"}
+{"timestamp": "2026-06-13 18:01:16", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "删除", "user": "周静(zhoujing)", "ip": "192.168.207.186", "device": "iPhone"}
+{"timestamp": "2026-06-13 17:40:58", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "移动", "user": "周静(zhoujing)", "ip": "192.168.153.157", "device": "Web"}
+{"timestamp": "2026-06-13 15:51:53", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "移动", "user": "李娜(lina)", "ip": "192.168.97.182", "device": "Android"}
+{"timestamp": "2026-06-13 14:41:15", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "外链访问", "user": "李娜(lina)", "ip": "192.168.99.119", "device": "MacBook"}
+{"timestamp": "2026-06-13 14:32:20", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "重命名", "user": "李娜(lina)", "ip": "192.168.172.94", "device": "iPhone"}
+{"timestamp": "2026-06-13 13:36:36", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "移动", "user": "李娜(lina)", "ip": "192.168.134.1", "device": "Web"}
+{"timestamp": "2026-06-13 13:15:54", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.14.215", "device": "Android"}
+{"timestamp": "2026-06-13 12:31:11", "file_path": "/开发文档/API接口文档V2.0.md", "action": "移动", "user": "周静(zhoujing)", "ip": "192.168.242.123", "device": "MacBook"}
+{"timestamp": "2026-06-13 12:29:48", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "外链访问", "user": "陈超(chenchao)", "ip": "192.168.239.195", "device": "Android"}
+{"timestamp": "2026-06-13 10:46:46", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "分享", "user": "张伟(zhangwei)", "ip": "192.168.3.96", "device": "iPhone"}
+{"timestamp": "2026-06-13 06:21:19", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "移动", "user": "刘芳(liufang)", "ip": "192.168.210.2", "device": "Web"}
+{"timestamp": "2026-06-13 06:18:00", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "编辑", "user": "郑雪(zhengxue)", "ip": "192.168.150.5", "device": "Android"}
+{"timestamp": "2026-06-13 06:00:06", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "重命名", "user": "吴磊(wulei)", "ip": "192.168.249.69", "device": "MacBook"}
+{"timestamp": "2026-06-13 01:58:13", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "删除", "user": "李娜(lina)", "ip": "192.168.145.241", "device": "Windows PC"}
+{"timestamp": "2026-06-13 00:06:51", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "编辑", "user": "周静(zhoujing)", "ip": "192.168.107.83", "device": "iPhone"}
+{"timestamp": "2026-06-12 23:59:12", "file_path": "/开发文档/数据库设计.sql", "action": "下载", "user": "郑雪(zhengxue)", "ip": "192.168.71.127", "device": "Web"}
+{"timestamp": "2026-06-12 23:20:37", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "分享", "user": "周静(zhoujing)", "ip": "192.168.207.120", "device": "Windows PC"}
+{"timestamp": "2026-06-12 21:42:01", "file_path": "/开发文档/数据库设计.sql", "action": "下载", "user": "李娜(lina)", "ip": "192.168.147.63", "device": "MacBook"}
+{"timestamp": "2026-06-12 21:13:19", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "移动", "user": "吴磊(wulei)", "ip": "192.168.183.72", "device": "Web"}
+{"timestamp": "2026-06-12 19:34:41", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.19.77", "device": "iPhone"}
+{"timestamp": "2026-06-12 16:21:16", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.49.164", "device": "Windows PC"}
+{"timestamp": "2026-06-12 16:04:43", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "编辑", "user": "赵敏(zhaomin)", "ip": "192.168.63.97", "device": "Android"}
+{"timestamp": "2026-06-12 14:24:11", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "分享", "user": "李娜(lina)", "ip": "192.168.80.142", "device": "Web"}
+{"timestamp": "2026-06-12 14:16:58", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.201.73", "device": "Web"}
+{"timestamp": "2026-06-12 13:59:24", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "编辑", "user": "赵敏(zhaomin)", "ip": "192.168.216.227", "device": "Web"}
+{"timestamp": "2026-06-12 13:07:44", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "查看", "user": "吴磊(wulei)", "ip": "192.168.206.108", "device": "Web"}
+{"timestamp": "2026-06-12 11:48:44", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "移动", "user": "王磊(wanglei)", "ip": "192.168.198.109", "device": "Windows PC"}
+{"timestamp": "2026-06-12 11:04:09", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "编辑", "user": "孙浩(sunhao)", "ip": "192.168.21.241", "device": "Web"}
+{"timestamp": "2026-06-12 03:10:28", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "查看", "user": "郑雪(zhengxue)", "ip": "192.168.20.183", "device": "Android"}
+{"timestamp": "2026-06-12 02:07:07", "file_path": "/开发文档/数据库设计.sql", "action": "查看", "user": "吴磊(wulei)", "ip": "192.168.57.236", "device": "Web"}
+{"timestamp": "2026-06-12 01:49:37", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "外链访问", "user": "周静(zhoujing)", "ip": "192.168.21.143", "device": "iPhone"}
+{"timestamp": "2026-06-12 00:55:47", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "重命名", "user": "赵敏(zhaomin)", "ip": "192.168.90.76", "device": "MacBook"}
+{"timestamp": "2026-06-11 22:41:05", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "重命名", "user": "吴磊(wulei)", "ip": "192.168.195.77", "device": "iPhone"}
+{"timestamp": "2026-06-11 22:26:27", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.92.238", "device": "MacBook"}
+{"timestamp": "2026-06-11 21:57:47", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "分享", "user": "郑雪(zhengxue)", "ip": "192.168.121.45", "device": "Windows PC"}
+{"timestamp": "2026-06-11 20:10:23", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.113.164", "device": "MacBook"}
+{"timestamp": "2026-06-11 18:59:29", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.232.13", "device": "MacBook"}
+{"timestamp": "2026-06-11 11:01:37", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "移动", "user": "吴磊(wulei)", "ip": "192.168.170.102", "device": "iPhone"}
+{"timestamp": "2026-06-11 10:51:43", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "上传", "user": "孙浩(sunhao)", "ip": "192.168.22.135", "device": "MacBook"}
+{"timestamp": "2026-06-11 10:10:49", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "下载", "user": "陈超(chenchao)", "ip": "192.168.197.57", "device": "Web"}
+{"timestamp": "2026-06-11 08:36:52", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "外链访问", "user": "李娜(lina)", "ip": "192.168.11.49", "device": "Web"}
+{"timestamp": "2026-06-11 07:51:27", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "复制", "user": "吴磊(wulei)", "ip": "192.168.86.68", "device": "iPhone"}
+{"timestamp": "2026-06-11 06:31:41", "file_path": "/开发文档/数据库设计.sql", "action": "移动", "user": "王磊(wanglei)", "ip": "192.168.133.77", "device": "Windows PC"}
+{"timestamp": "2026-06-11 06:30:54", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "外链访问", "user": "刘芳(liufang)", "ip": "192.168.17.229", "device": "Web"}
+{"timestamp": "2026-06-11 05:33:06", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "上传", "user": "张伟(zhangwei)", "ip": "192.168.17.249", "device": "Windows PC"}
+{"timestamp": "2026-06-11 04:48:14", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.177.149", "device": "Web"}
+{"timestamp": "2026-06-11 03:56:56", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.202.30", "device": "iPhone"}
+{"timestamp": "2026-06-11 03:32:20", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "删除", "user": "赵敏(zhaomin)", "ip": "192.168.245.174", "device": "iPhone"}
+{"timestamp": "2026-06-11 03:13:49", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "上传", "user": "孙浩(sunhao)", "ip": "192.168.38.116", "device": "Android"}
+{"timestamp": "2026-06-11 02:38:51", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "移动", "user": "吴磊(wulei)", "ip": "192.168.249.51", "device": "Windows PC"}
+{"timestamp": "2026-06-10 23:46:17", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "上传", "user": "吴磊(wulei)", "ip": "192.168.150.204", "device": "Windows PC"}
+{"timestamp": "2026-06-10 21:32:21", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "删除", "user": "刘芳(liufang)", "ip": "192.168.169.83", "device": "MacBook"}
+{"timestamp": "2026-06-10 21:29:36", "file_path": "/开发文档/API接口文档V2.0.md", "action": "复制", "user": "陈超(chenchao)", "ip": "192.168.120.197", "device": "iPhone"}
+{"timestamp": "2026-06-10 19:39:20", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.135.161", "device": "Windows PC"}
+{"timestamp": "2026-06-10 19:26:18", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "下载", "user": "陈超(chenchao)", "ip": "192.168.173.83", "device": "MacBook"}
+{"timestamp": "2026-06-10 16:09:09", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "移动", "user": "吴磊(wulei)", "ip": "192.168.164.239", "device": "Android"}
+{"timestamp": "2026-06-10 14:21:50", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "外链访问", "user": "陈超(chenchao)", "ip": "192.168.139.198", "device": "Web"}
+{"timestamp": "2026-06-10 10:50:35", "file_path": "/开发文档/数据库设计.sql", "action": "查看", "user": "周静(zhoujing)", "ip": "192.168.199.78", "device": "MacBook"}
+{"timestamp": "2026-06-10 10:41:12", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.188.44", "device": "Web"}
+{"timestamp": "2026-06-10 07:00:52", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "删除", "user": "李娜(lina)", "ip": "192.168.185.37", "device": "Web"}
+{"timestamp": "2026-06-10 05:28:58", "file_path": "/开发文档/API接口文档V2.0.md", "action": "复制", "user": "王磊(wanglei)", "ip": "192.168.21.175", "device": "Android"}
+{"timestamp": "2026-06-10 04:41:37", "file_path": "/开发文档/API接口文档V2.0.md", "action": "下载", "user": "郑雪(zhengxue)", "ip": "192.168.164.78", "device": "Web"}
+{"timestamp": "2026-06-10 03:41:01", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "编辑", "user": "王磊(wanglei)", "ip": "192.168.146.31", "device": "Android"}
+{"timestamp": "2026-06-10 02:45:47", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "查看", "user": "李娜(lina)", "ip": "192.168.83.165", "device": "MacBook"}
+{"timestamp": "2026-06-10 01:29:02", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "上传", "user": "吴磊(wulei)", "ip": "192.168.159.117", "device": "Web"}
+{"timestamp": "2026-06-10 01:19:34", "file_path": "/开发文档/API接口文档V2.0.md", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.47.149", "device": "iPhone"}
+{"timestamp": "2026-06-09 22:54:14", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.157.251", "device": "Android"}
+{"timestamp": "2026-06-09 22:24:54", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "上传", "user": "吴磊(wulei)", "ip": "192.168.231.226", "device": "Android"}
+{"timestamp": "2026-06-09 22:23:19", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.244.66", "device": "MacBook"}
+{"timestamp": "2026-06-09 21:59:48", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "重命名", "user": "张伟(zhangwei)", "ip": "192.168.153.229", "device": "Web"}
+{"timestamp": "2026-06-09 21:38:41", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "移动", "user": "李娜(lina)", "ip": "192.168.139.1", "device": "Windows PC"}
+{"timestamp": "2026-06-09 18:08:55", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.38.40", "device": "Windows PC"}
+{"timestamp": "2026-06-09 11:43:11", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "分享", "user": "赵敏(zhaomin)", "ip": "192.168.151.132", "device": "iPhone"}
+{"timestamp": "2026-06-09 11:16:07", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "外链访问", "user": "孙浩(sunhao)", "ip": "192.168.146.26", "device": "Android"}
+{"timestamp": "2026-06-09 11:10:07", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "重命名", "user": "李娜(lina)", "ip": "192.168.61.7", "device": "Windows PC"}
+{"timestamp": "2026-06-09 10:58:54", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "外链访问", "user": "刘芳(liufang)", "ip": "192.168.190.247", "device": "Web"}
+{"timestamp": "2026-06-09 06:18:01", "file_path": "/开发文档/数据库设计.sql", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.103.30", "device": "Web"}
+{"timestamp": "2026-06-09 05:31:08", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "分享", "user": "王磊(wanglei)", "ip": "192.168.54.107", "device": "MacBook"}
+{"timestamp": "2026-06-09 03:22:38", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.91.101", "device": "Windows PC"}
+{"timestamp": "2026-06-08 21:30:47", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.137.124", "device": "Windows PC"}
+{"timestamp": "2026-06-08 21:30:36", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "移动", "user": "郑雪(zhengxue)", "ip": "192.168.149.36", "device": "Android"}
+{"timestamp": "2026-06-08 21:09:12", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "外链访问", "user": "孙浩(sunhao)", "ip": "192.168.8.176", "device": "Windows PC"}
+{"timestamp": "2026-06-08 19:14:10", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "复制", "user": "刘芳(liufang)", "ip": "192.168.96.150", "device": "Android"}
+{"timestamp": "2026-06-08 18:32:05", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "下载", "user": "孙浩(sunhao)", "ip": "192.168.115.170", "device": "Windows PC"}
+{"timestamp": "2026-06-08 18:24:48", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "复制", "user": "郑雪(zhengxue)", "ip": "192.168.55.28", "device": "MacBook"}
+{"timestamp": "2026-06-08 17:56:04", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.244.211", "device": "iPhone"}
+{"timestamp": "2026-06-08 17:14:17", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "复制", "user": "郑雪(zhengxue)", "ip": "192.168.107.57", "device": "Android"}
+{"timestamp": "2026-06-08 15:53:42", "file_path": "/开发文档/API接口文档V2.0.md", "action": "删除", "user": "赵敏(zhaomin)", "ip": "192.168.148.139", "device": "Web"}
+{"timestamp": "2026-06-08 15:16:41", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "上传", "user": "赵敏(zhaomin)", "ip": "192.168.164.42", "device": "Windows PC"}
+{"timestamp": "2026-06-08 14:44:15", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "移动", "user": "郑雪(zhengxue)", "ip": "192.168.179.163", "device": "iPhone"}
+{"timestamp": "2026-06-08 12:26:33", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.102.224", "device": "Windows PC"}
+{"timestamp": "2026-06-08 11:17:13", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "外链访问", "user": "刘芳(liufang)", "ip": "192.168.204.109", "device": "Android"}
+{"timestamp": "2026-06-08 09:06:12", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "查看", "user": "吴磊(wulei)", "ip": "192.168.76.254", "device": "iPhone"}
+{"timestamp": "2026-06-08 08:03:02", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "重命名", "user": "赵敏(zhaomin)", "ip": "192.168.203.57", "device": "MacBook"}
+{"timestamp": "2026-06-08 07:59:19", "file_path": "/开发文档/API接口文档V2.0.md", "action": "下载", "user": "吴磊(wulei)", "ip": "192.168.254.85", "device": "iPhone"}
+{"timestamp": "2026-06-08 07:57:20", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "移动", "user": "李娜(lina)", "ip": "192.168.48.146", "device": "iPhone"}
+{"timestamp": "2026-06-08 07:45:18", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "复制", "user": "周静(zhoujing)", "ip": "192.168.93.122", "device": "MacBook"}
+{"timestamp": "2026-06-08 05:33:57", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "上传", "user": "王磊(wanglei)", "ip": "192.168.120.205", "device": "MacBook"}
+{"timestamp": "2026-06-08 04:53:19", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "查看", "user": "刘芳(liufang)", "ip": "192.168.5.224", "device": "MacBook"}
+{"timestamp": "2026-06-08 04:43:01", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "分享", "user": "陈超(chenchao)", "ip": "192.168.21.57", "device": "Web"}
+{"timestamp": "2026-06-08 03:00:54", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "上传", "user": "王磊(wanglei)", "ip": "192.168.120.207", "device": "Android"}
+{"timestamp": "2026-06-08 02:25:33", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "编辑", "user": "张伟(zhangwei)", "ip": "192.168.135.147", "device": "Windows PC"}
+{"timestamp": "2026-06-08 01:51:01", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "下载", "user": "郑雪(zhengxue)", "ip": "192.168.228.232", "device": "iPhone"}
+{"timestamp": "2026-06-08 01:24:51", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "下载", "user": "陈超(chenchao)", "ip": "192.168.46.140", "device": "Windows PC"}
+{"timestamp": "2026-06-07 23:09:46", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "查看", "user": "周静(zhoujing)", "ip": "192.168.195.114", "device": "MacBook"}
+{"timestamp": "2026-06-07 22:40:23", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "分享", "user": "周静(zhoujing)", "ip": "192.168.232.30", "device": "MacBook"}
+{"timestamp": "2026-06-07 22:05:59", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "编辑", "user": "张伟(zhangwei)", "ip": "192.168.11.179", "device": "Android"}
+{"timestamp": "2026-06-07 21:43:10", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "分享", "user": "吴磊(wulei)", "ip": "192.168.81.190", "device": "Android"}
+{"timestamp": "2026-06-07 20:52:44", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "外链访问", "user": "刘芳(liufang)", "ip": "192.168.18.84", "device": "iPhone"}
+{"timestamp": "2026-06-07 17:56:08", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "重命名", "user": "孙浩(sunhao)", "ip": "192.168.34.89", "device": "Android"}
+{"timestamp": "2026-06-07 17:45:09", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "编辑", "user": "赵敏(zhaomin)", "ip": "192.168.231.170", "device": "Android"}
+{"timestamp": "2026-06-07 16:06:04", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "编辑", "user": "王磊(wanglei)", "ip": "192.168.25.229", "device": "iPhone"}
+{"timestamp": "2026-06-07 16:05:44", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "复制", "user": "陈超(chenchao)", "ip": "192.168.74.216", "device": "iPhone"}
+{"timestamp": "2026-06-07 11:55:23", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "分享", "user": "李娜(lina)", "ip": "192.168.88.60", "device": "Web"}
+{"timestamp": "2026-06-07 11:52:02", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "外链访问", "user": "陈超(chenchao)", "ip": "192.168.149.255", "device": "Web"}
+{"timestamp": "2026-06-07 11:11:03", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "分享", "user": "张伟(zhangwei)", "ip": "192.168.42.135", "device": "MacBook"}
+{"timestamp": "2026-06-07 09:16:05", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "重命名", "user": "周静(zhoujing)", "ip": "192.168.11.235", "device": "Web"}
+{"timestamp": "2026-06-07 07:11:51", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "编辑", "user": "李娜(lina)", "ip": "192.168.51.68", "device": "Web"}
+{"timestamp": "2026-06-07 07:02:55", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "分享", "user": "张伟(zhangwei)", "ip": "192.168.61.28", "device": "MacBook"}
+{"timestamp": "2026-06-07 06:17:11", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "分享", "user": "周静(zhoujing)", "ip": "192.168.169.1", "device": "iPhone"}
+{"timestamp": "2026-06-07 04:17:36", "file_path": "/开发文档/数据库设计.sql", "action": "编辑", "user": "赵敏(zhaomin)", "ip": "192.168.78.91", "device": "iPhone"}
+{"timestamp": "2026-06-07 02:27:58", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "编辑", "user": "陈超(chenchao)", "ip": "192.168.165.86", "device": "Windows PC"}
+{"timestamp": "2026-06-07 01:45:24", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "分享", "user": "赵敏(zhaomin)", "ip": "192.168.235.126", "device": "Windows PC"}
+{"timestamp": "2026-06-07 01:42:49", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "外链访问", "user": "刘芳(liufang)", "ip": "192.168.102.4", "device": "Web"}
+{"timestamp": "2026-06-07 01:37:56", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "分享", "user": "刘芳(liufang)", "ip": "192.168.115.33", "device": "MacBook"}
+{"timestamp": "2026-06-07 01:11:31", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "分享", "user": "王磊(wanglei)", "ip": "192.168.176.147", "device": "Android"}
+{"timestamp": "2026-06-07 00:08:13", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "删除", "user": "刘芳(liufang)", "ip": "192.168.91.237", "device": "Windows PC"}
+{"timestamp": "2026-06-06 23:31:50", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "移动", "user": "郑雪(zhengxue)", "ip": "192.168.74.123", "device": "Web"}
+{"timestamp": "2026-06-06 22:28:21", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "查看", "user": "郑雪(zhengxue)", "ip": "192.168.6.210", "device": "Windows PC"}
+{"timestamp": "2026-06-06 21:19:18", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "分享", "user": "赵敏(zhaomin)", "ip": "192.168.4.253", "device": "Android"}
+{"timestamp": "2026-06-06 20:54:06", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "查看", "user": "孙浩(sunhao)", "ip": "192.168.6.169", "device": "MacBook"}
+{"timestamp": "2026-06-06 20:13:27", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "下载", "user": "郑雪(zhengxue)", "ip": "192.168.181.88", "device": "MacBook"}
+{"timestamp": "2026-06-06 18:36:46", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "编辑", "user": "赵敏(zhaomin)", "ip": "192.168.91.249", "device": "iPhone"}
+{"timestamp": "2026-06-06 18:34:38", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "查看", "user": "李娜(lina)", "ip": "192.168.234.75", "device": "Android"}
+{"timestamp": "2026-06-06 16:51:33", "file_path": "/开发文档/数据库设计.sql", "action": "下载", "user": "孙浩(sunhao)", "ip": "192.168.211.10", "device": "iPhone"}
+{"timestamp": "2026-06-06 14:57:50", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "分享", "user": "郑雪(zhengxue)", "ip": "192.168.144.1", "device": "MacBook"}
+{"timestamp": "2026-06-06 11:53:57", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "查看", "user": "郑雪(zhengxue)", "ip": "192.168.13.5", "device": "iPhone"}
+{"timestamp": "2026-06-06 09:38:40", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "查看", "user": "李娜(lina)", "ip": "192.168.192.86", "device": "MacBook"}
+{"timestamp": "2026-06-06 08:34:04", "file_path": "/开发文档/API接口文档V2.0.md", "action": "复制", "user": "王磊(wanglei)", "ip": "192.168.103.3", "device": "Android"}
+{"timestamp": "2026-06-06 08:12:49", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.16.51", "device": "iPhone"}
+{"timestamp": "2026-06-06 06:54:09", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "删除", "user": "周静(zhoujing)", "ip": "192.168.170.205", "device": "Android"}
+{"timestamp": "2026-06-06 05:50:27", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "下载", "user": "周静(zhoujing)", "ip": "192.168.115.236", "device": "iPhone"}
+{"timestamp": "2026-06-06 03:14:36", "file_path": "/开发文档/数据库设计.sql", "action": "下载", "user": "周静(zhoujing)", "ip": "192.168.192.167", "device": "Android"}
+{"timestamp": "2026-06-06 03:13:14", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "复制", "user": "周静(zhoujing)", "ip": "192.168.242.76", "device": "iPhone"}
+{"timestamp": "2026-06-06 01:21:13", "file_path": "/开发文档/API接口文档V2.0.md", "action": "复制", "user": "吴磊(wulei)", "ip": "192.168.95.42", "device": "Android"}
+{"timestamp": "2026-06-05 23:38:49", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "查看", "user": "陈超(chenchao)", "ip": "192.168.63.54", "device": "Windows PC"}
+{"timestamp": "2026-06-05 23:33:52", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.120.155", "device": "MacBook"}
+{"timestamp": "2026-06-05 23:27:06", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.239.111", "device": "Web"}
+{"timestamp": "2026-06-05 22:52:37", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "移动", "user": "陈超(chenchao)", "ip": "192.168.110.191", "device": "Web"}
+{"timestamp": "2026-06-05 18:44:17", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "上传", "user": "孙浩(sunhao)", "ip": "192.168.3.47", "device": "Android"}
+{"timestamp": "2026-06-05 13:58:54", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "移动", "user": "郑雪(zhengxue)", "ip": "192.168.160.80", "device": "Windows PC"}
+{"timestamp": "2026-06-05 13:32:52", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "分享", "user": "李娜(lina)", "ip": "192.168.140.157", "device": "Android"}
+{"timestamp": "2026-06-05 12:46:14", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "分享", "user": "周静(zhoujing)", "ip": "192.168.128.118", "device": "Android"}
+{"timestamp": "2026-06-05 10:57:32", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "编辑", "user": "李娜(lina)", "ip": "192.168.181.17", "device": "MacBook"}
+{"timestamp": "2026-06-05 10:18:33", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "复制", "user": "王磊(wanglei)", "ip": "192.168.70.177", "device": "Web"}
+{"timestamp": "2026-06-05 09:50:13", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "复制", "user": "刘芳(liufang)", "ip": "192.168.66.48", "device": "MacBook"}
+{"timestamp": "2026-06-05 07:23:44", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "删除", "user": "郑雪(zhengxue)", "ip": "192.168.246.104", "device": "MacBook"}
+{"timestamp": "2026-06-05 07:11:14", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.154.142", "device": "Android"}
+{"timestamp": "2026-06-05 05:17:58", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "移动", "user": "郑雪(zhengxue)", "ip": "192.168.235.29", "device": "Android"}
+{"timestamp": "2026-06-04 23:33:07", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "复制", "user": "李娜(lina)", "ip": "192.168.203.52", "device": "Web"}
+{"timestamp": "2026-06-04 21:06:59", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.154.197", "device": "Windows PC"}
+{"timestamp": "2026-06-04 19:58:53", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "重命名", "user": "刘芳(liufang)", "ip": "192.168.10.145", "device": "Android"}
+{"timestamp": "2026-06-04 19:17:19", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "复制", "user": "吴磊(wulei)", "ip": "192.168.41.168", "device": "Android"}
+{"timestamp": "2026-06-04 16:17:52", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.160.73", "device": "Windows PC"}
+{"timestamp": "2026-06-04 16:12:59", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "外链访问", "user": "周静(zhoujing)", "ip": "192.168.155.172", "device": "iPhone"}
+{"timestamp": "2026-06-04 15:21:16", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "移动", "user": "陈超(chenchao)", "ip": "192.168.105.20", "device": "Web"}
+{"timestamp": "2026-06-04 13:42:40", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "外链访问", "user": "李娜(lina)", "ip": "192.168.184.182", "device": "iPhone"}
+{"timestamp": "2026-06-04 11:08:17", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "外链访问", "user": "孙浩(sunhao)", "ip": "192.168.162.253", "device": "Web"}
+{"timestamp": "2026-06-04 10:48:52", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "编辑", "user": "孙浩(sunhao)", "ip": "192.168.21.46", "device": "Web"}
+{"timestamp": "2026-06-04 10:13:01", "file_path": "/开发文档/数据库设计.sql", "action": "上传", "user": "孙浩(sunhao)", "ip": "192.168.251.245", "device": "Web"}
+{"timestamp": "2026-06-04 09:58:27", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "外链访问", "user": "吴磊(wulei)", "ip": "192.168.203.244", "device": "iPhone"}
+{"timestamp": "2026-06-04 08:16:33", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "下载", "user": "赵敏(zhaomin)", "ip": "192.168.165.83", "device": "iPhone"}
+{"timestamp": "2026-06-04 05:48:15", "file_path": "/开发文档/API接口文档V2.0.md", "action": "移动", "user": "李娜(lina)", "ip": "192.168.25.51", "device": "Web"}
+{"timestamp": "2026-06-04 04:39:50", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "查看", "user": "李娜(lina)", "ip": "192.168.70.40", "device": "Android"}
+{"timestamp": "2026-06-04 04:30:54", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "上传", "user": "赵敏(zhaomin)", "ip": "192.168.24.51", "device": "Web"}
+{"timestamp": "2026-06-04 04:28:41", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "移动", "user": "张伟(zhangwei)", "ip": "192.168.13.169", "device": "Windows PC"}
+{"timestamp": "2026-06-04 01:09:57", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "复制", "user": "吴磊(wulei)", "ip": "192.168.151.123", "device": "Web"}
+{"timestamp": "2026-06-03 22:45:29", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "上传", "user": "孙浩(sunhao)", "ip": "192.168.245.254", "device": "MacBook"}
+{"timestamp": "2026-06-03 22:07:59", "file_path": "/开发文档/API接口文档V2.0.md", "action": "外链访问", "user": "郑雪(zhengxue)", "ip": "192.168.175.183", "device": "Android"}
+{"timestamp": "2026-06-03 20:54:33", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "重命名", "user": "周静(zhoujing)", "ip": "192.168.211.121", "device": "Windows PC"}
+{"timestamp": "2026-06-03 20:49:55", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "编辑", "user": "周静(zhoujing)", "ip": "192.168.146.168", "device": "Windows PC"}
+{"timestamp": "2026-06-03 20:32:38", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.125.212", "device": "Windows PC"}
+{"timestamp": "2026-06-03 20:04:13", "file_path": "/开发文档/API接口文档V2.0.md", "action": "移动", "user": "刘芳(liufang)", "ip": "192.168.2.251", "device": "Windows PC"}
+{"timestamp": "2026-06-03 19:57:40", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "重命名", "user": "吴磊(wulei)", "ip": "192.168.156.100", "device": "Android"}
+{"timestamp": "2026-06-03 18:19:36", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "上传", "user": "周静(zhoujing)", "ip": "192.168.163.140", "device": "Web"}
+{"timestamp": "2026-06-03 17:35:48", "file_path": "/开发文档/API接口文档V2.0.md", "action": "编辑", "user": "吴磊(wulei)", "ip": "192.168.97.204", "device": "MacBook"}
+{"timestamp": "2026-06-03 17:01:28", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "编辑", "user": "李娜(lina)", "ip": "192.168.23.141", "device": "MacBook"}
+{"timestamp": "2026-06-03 16:39:08", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "下载", "user": "郑雪(zhengxue)", "ip": "192.168.217.4", "device": "Web"}
+{"timestamp": "2026-06-03 16:22:57", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "删除", "user": "吴磊(wulei)", "ip": "192.168.136.45", "device": "MacBook"}
+{"timestamp": "2026-06-03 16:14:05", "file_path": "/开发文档/API接口文档V2.0.md", "action": "查看", "user": "陈超(chenchao)", "ip": "192.168.137.41", "device": "Windows PC"}
+{"timestamp": "2026-06-03 15:43:52", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "下载", "user": "陈超(chenchao)", "ip": "192.168.171.206", "device": "iPhone"}
+{"timestamp": "2026-06-03 13:10:02", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.28.163", "device": "MacBook"}
+{"timestamp": "2026-06-03 09:55:29", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "删除", "user": "刘芳(liufang)", "ip": "192.168.203.98", "device": "Web"}
+{"timestamp": "2026-06-03 09:05:53", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "分享", "user": "王磊(wanglei)", "ip": "192.168.154.151", "device": "MacBook"}
+{"timestamp": "2026-06-03 06:24:26", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "重命名", "user": "郑雪(zhengxue)", "ip": "192.168.70.205", "device": "iPhone"}
+{"timestamp": "2026-06-03 02:02:28", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "上传", "user": "吴磊(wulei)", "ip": "192.168.121.31", "device": "Windows PC"}
+{"timestamp": "2026-06-02 21:05:38", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "下载", "user": "陈超(chenchao)", "ip": "192.168.247.252", "device": "iPhone"}
+{"timestamp": "2026-06-02 18:52:55", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "外链访问", "user": "郑雪(zhengxue)", "ip": "192.168.22.252", "device": "Android"}
+{"timestamp": "2026-06-02 18:35:05", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "删除", "user": "吴磊(wulei)", "ip": "192.168.96.20", "device": "Web"}
+{"timestamp": "2026-06-02 14:19:18", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "移动", "user": "张伟(zhangwei)", "ip": "192.168.151.255", "device": "Android"}
+{"timestamp": "2026-06-02 13:40:44", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.45.23", "device": "Android"}
+{"timestamp": "2026-06-02 12:04:39", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "重命名", "user": "孙浩(sunhao)", "ip": "192.168.127.176", "device": "Android"}
+{"timestamp": "2026-06-02 11:39:39", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.112.252", "device": "Web"}
+{"timestamp": "2026-06-02 10:57:31", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "查看", "user": "孙浩(sunhao)", "ip": "192.168.108.23", "device": "MacBook"}
+{"timestamp": "2026-06-02 08:31:25", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "删除", "user": "陈超(chenchao)", "ip": "192.168.69.197", "device": "Android"}
+{"timestamp": "2026-06-02 07:59:17", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "移动", "user": "陈超(chenchao)", "ip": "192.168.195.165", "device": "Windows PC"}
+{"timestamp": "2026-06-02 06:15:22", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.146.147", "device": "iPhone"}
+{"timestamp": "2026-06-02 02:37:15", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.68.167", "device": "iPhone"}
+{"timestamp": "2026-06-01 23:11:18", "file_path": "/开发文档/数据库设计.sql", "action": "下载", "user": "刘芳(liufang)", "ip": "192.168.165.254", "device": "Windows PC"}
+{"timestamp": "2026-06-01 22:54:57", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "删除", "user": "孙浩(sunhao)", "ip": "192.168.51.7", "device": "MacBook"}
+{"timestamp": "2026-06-01 19:42:08", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "查看", "user": "张伟(zhangwei)", "ip": "192.168.70.173", "device": "Android"}
+{"timestamp": "2026-06-01 16:28:28", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "下载", "user": "赵敏(zhaomin)", "ip": "192.168.243.28", "device": "iPhone"}
+{"timestamp": "2026-06-01 15:26:38", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "分享", "user": "刘芳(liufang)", "ip": "192.168.29.114", "device": "MacBook"}
+{"timestamp": "2026-06-01 13:08:00", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "编辑", "user": "吴磊(wulei)", "ip": "192.168.7.29", "device": "iPhone"}
+{"timestamp": "2026-06-01 11:30:32", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "分享", "user": "王磊(wanglei)", "ip": "192.168.179.34", "device": "Windows PC"}
+{"timestamp": "2026-06-01 08:46:57", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "上传", "user": "李娜(lina)", "ip": "192.168.129.171", "device": "Windows PC"}
+{"timestamp": "2026-06-01 01:43:38", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "删除", "user": "刘芳(liufang)", "ip": "192.168.35.15", "device": "Web"}
+{"timestamp": "2026-05-31 23:12:21", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "删除", "user": "张伟(zhangwei)", "ip": "192.168.206.172", "device": "Android"}
+{"timestamp": "2026-05-31 22:52:25", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "查看", "user": "张伟(zhangwei)", "ip": "192.168.73.209", "device": "Web"}
+{"timestamp": "2026-05-31 22:31:46", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "删除", "user": "孙浩(sunhao)", "ip": "192.168.221.249", "device": "Web"}
+{"timestamp": "2026-05-31 19:43:39", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.252.140", "device": "iPhone"}
+{"timestamp": "2026-05-31 19:33:13", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "上传", "user": "李娜(lina)", "ip": "192.168.216.42", "device": "Web"}
+{"timestamp": "2026-05-31 14:43:55", "file_path": "/开发文档/API接口文档V2.0.md", "action": "查看", "user": "李娜(lina)", "ip": "192.168.101.39", "device": "Android"}
+{"timestamp": "2026-05-31 13:46:55", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "移动", "user": "王磊(wanglei)", "ip": "192.168.121.144", "device": "MacBook"}
+{"timestamp": "2026-05-31 12:48:50", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.46.211", "device": "Web"}
+{"timestamp": "2026-05-31 11:57:01", "file_path": "/开发文档/API接口文档V2.0.md", "action": "查看", "user": "孙浩(sunhao)", "ip": "192.168.154.168", "device": "MacBook"}
+{"timestamp": "2026-05-31 11:55:05", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.214.253", "device": "Android"}
+{"timestamp": "2026-05-31 11:21:53", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "移动", "user": "李娜(lina)", "ip": "192.168.58.121", "device": "iPhone"}
+{"timestamp": "2026-05-31 09:34:29", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.84.183", "device": "Web"}
+{"timestamp": "2026-05-31 08:17:07", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "查看", "user": "王磊(wanglei)", "ip": "192.168.113.29", "device": "Windows PC"}
+{"timestamp": "2026-05-31 07:51:29", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "查看", "user": "李娜(lina)", "ip": "192.168.161.153", "device": "Android"}
+{"timestamp": "2026-05-31 04:44:01", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "编辑", "user": "郑雪(zhengxue)", "ip": "192.168.65.33", "device": "Android"}
+{"timestamp": "2026-05-30 23:49:35", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "编辑", "user": "张伟(zhangwei)", "ip": "192.168.139.153", "device": "Android"}
+{"timestamp": "2026-05-30 23:37:23", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "上传", "user": "赵敏(zhaomin)", "ip": "192.168.243.163", "device": "Android"}
+{"timestamp": "2026-05-30 21:49:26", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "分享", "user": "刘芳(liufang)", "ip": "192.168.11.138", "device": "Windows PC"}
+{"timestamp": "2026-05-30 21:17:29", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "复制", "user": "赵敏(zhaomin)", "ip": "192.168.8.177", "device": "Windows PC"}
+{"timestamp": "2026-05-30 19:15:01", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "外链访问", "user": "张伟(zhangwei)", "ip": "192.168.132.24", "device": "Windows PC"}
+{"timestamp": "2026-05-30 14:48:49", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "上传", "user": "刘芳(liufang)", "ip": "192.168.193.205", "device": "Android"}
+{"timestamp": "2026-05-30 12:53:54", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "下载", "user": "李娜(lina)", "ip": "192.168.110.219", "device": "Web"}
+{"timestamp": "2026-05-30 08:12:09", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "重命名", "user": "张伟(zhangwei)", "ip": "192.168.31.91", "device": "Web"}
+{"timestamp": "2026-05-30 03:29:40", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "编辑", "user": "李娜(lina)", "ip": "192.168.215.219", "device": "Windows PC"}
+{"timestamp": "2026-05-30 02:13:06", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "移动", "user": "陈超(chenchao)", "ip": "192.168.244.112", "device": "Android"}
+{"timestamp": "2026-05-30 01:58:22", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "查看", "user": "陈超(chenchao)", "ip": "192.168.143.26", "device": "iPhone"}
+{"timestamp": "2026-05-30 01:56:32", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "复制", "user": "张伟(zhangwei)", "ip": "192.168.97.139", "device": "iPhone"}
+{"timestamp": "2026-05-30 01:04:18", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "查看", "user": "王磊(wanglei)", "ip": "192.168.22.235", "device": "Windows PC"}
+{"timestamp": "2026-05-30 00:30:36", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.102.72", "device": "Windows PC"}
+{"timestamp": "2026-05-29 23:03:28", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.209.200", "device": "MacBook"}
+{"timestamp": "2026-05-29 21:48:07", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "查看", "user": "张伟(zhangwei)", "ip": "192.168.41.216", "device": "MacBook"}
+{"timestamp": "2026-05-29 21:14:45", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "编辑", "user": "赵敏(zhaomin)", "ip": "192.168.8.7", "device": "Web"}
+{"timestamp": "2026-05-29 20:48:19", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "外链访问", "user": "郑雪(zhengxue)", "ip": "192.168.120.209", "device": "MacBook"}
+{"timestamp": "2026-05-29 17:49:08", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "复制", "user": "王磊(wanglei)", "ip": "192.168.230.140", "device": "Web"}
+{"timestamp": "2026-05-29 15:37:48", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "上传", "user": "刘芳(liufang)", "ip": "192.168.246.182", "device": "MacBook"}
+{"timestamp": "2026-05-29 14:18:25", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.206.36", "device": "iPhone"}
+{"timestamp": "2026-05-29 12:06:30", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "上传", "user": "陈超(chenchao)", "ip": "192.168.64.70", "device": "Windows PC"}
+{"timestamp": "2026-05-29 11:07:20", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "删除", "user": "周静(zhoujing)", "ip": "192.168.69.117", "device": "MacBook"}
+{"timestamp": "2026-05-29 10:57:30", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "查看", "user": "李娜(lina)", "ip": "192.168.145.79", "device": "iPhone"}
+{"timestamp": "2026-05-29 10:29:42", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "删除", "user": "刘芳(liufang)", "ip": "192.168.229.63", "device": "Android"}
+{"timestamp": "2026-05-29 09:40:23", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "编辑", "user": "郑雪(zhengxue)", "ip": "192.168.177.114", "device": "MacBook"}
+{"timestamp": "2026-05-29 09:24:39", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "分享", "user": "周静(zhoujing)", "ip": "192.168.222.198", "device": "Web"}
+{"timestamp": "2026-05-29 09:17:08", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "查看", "user": "周静(zhoujing)", "ip": "192.168.162.253", "device": "Android"}
+{"timestamp": "2026-05-29 09:10:15", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "编辑", "user": "陈超(chenchao)", "ip": "192.168.109.202", "device": "Android"}
+{"timestamp": "2026-05-29 07:44:33", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.159.136", "device": "MacBook"}
+{"timestamp": "2026-05-29 07:10:18", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "分享", "user": "孙浩(sunhao)", "ip": "192.168.7.246", "device": "iPhone"}
+{"timestamp": "2026-05-29 05:44:58", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "复制", "user": "王磊(wanglei)", "ip": "192.168.244.77", "device": "Windows PC"}
+{"timestamp": "2026-05-29 05:35:29", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "下载", "user": "赵敏(zhaomin)", "ip": "192.168.115.237", "device": "iPhone"}
+{"timestamp": "2026-05-29 03:50:58", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "查看", "user": "周静(zhoujing)", "ip": "192.168.208.134", "device": "Web"}
+{"timestamp": "2026-05-29 02:12:04", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "外链访问", "user": "吴磊(wulei)", "ip": "192.168.4.216", "device": "Android"}
+{"timestamp": "2026-05-29 01:07:15", "file_path": "/开发文档/数据库设计.sql", "action": "上传", "user": "周静(zhoujing)", "ip": "192.168.96.70", "device": "Windows PC"}
+{"timestamp": "2026-05-28 21:02:28", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "上传", "user": "张伟(zhangwei)", "ip": "192.168.5.185", "device": "Android"}
+{"timestamp": "2026-05-28 20:47:51", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.193.158", "device": "Web"}
+{"timestamp": "2026-05-28 16:41:27", "file_path": "/开发文档/API接口文档V2.0.md", "action": "分享", "user": "吴磊(wulei)", "ip": "192.168.238.188", "device": "MacBook"}
+{"timestamp": "2026-05-28 16:27:48", "file_path": "/开发文档/API接口文档V2.0.md", "action": "下载", "user": "张伟(zhangwei)", "ip": "192.168.106.116", "device": "Web"}
+{"timestamp": "2026-05-28 16:09:45", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "移动", "user": "赵敏(zhaomin)", "ip": "192.168.8.85", "device": "Windows PC"}
+{"timestamp": "2026-05-28 15:08:01", "file_path": "/开发文档/API接口文档V2.0.md", "action": "上传", "user": "孙浩(sunhao)", "ip": "192.168.214.181", "device": "iPhone"}
+{"timestamp": "2026-05-28 14:49:34", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "复制", "user": "张伟(zhangwei)", "ip": "192.168.194.248", "device": "Windows PC"}
+{"timestamp": "2026-05-28 12:29:36", "file_path": "/开发文档/API接口文档V2.0.md", "action": "分享", "user": "孙浩(sunhao)", "ip": "192.168.93.28", "device": "Android"}
+{"timestamp": "2026-05-28 12:15:30", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.119.26", "device": "Windows PC"}
+{"timestamp": "2026-05-28 09:09:18", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "分享", "user": "郑雪(zhengxue)", "ip": "192.168.36.131", "device": "Windows PC"}
+{"timestamp": "2026-05-28 08:26:26", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "编辑", "user": "张伟(zhangwei)", "ip": "192.168.113.41", "device": "MacBook"}
+{"timestamp": "2026-05-28 08:13:27", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "重命名", "user": "吴磊(wulei)", "ip": "192.168.151.150", "device": "MacBook"}
+{"timestamp": "2026-05-28 07:31:55", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "编辑", "user": "张伟(zhangwei)", "ip": "192.168.204.218", "device": "Windows PC"}
+{"timestamp": "2026-05-28 07:16:55", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "复制", "user": "孙浩(sunhao)", "ip": "192.168.9.12", "device": "MacBook"}
+{"timestamp": "2026-05-28 07:10:52", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "重命名", "user": "赵敏(zhaomin)", "ip": "192.168.20.18", "device": "iPhone"}
+{"timestamp": "2026-05-28 06:44:54", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "外链访问", "user": "吴磊(wulei)", "ip": "192.168.147.2", "device": "MacBook"}
+{"timestamp": "2026-05-28 06:09:28", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "下载", "user": "周静(zhoujing)", "ip": "192.168.130.25", "device": "Web"}
+{"timestamp": "2026-05-28 05:51:21", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "分享", "user": "周静(zhoujing)", "ip": "192.168.253.181", "device": "Android"}
+{"timestamp": "2026-05-28 04:42:59", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "分享", "user": "刘芳(liufang)", "ip": "192.168.15.2", "device": "MacBook"}
+{"timestamp": "2026-05-28 03:33:36", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "移动", "user": "孙浩(sunhao)", "ip": "192.168.67.10", "device": "MacBook"}
+{"timestamp": "2026-05-28 01:48:05", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "上传", "user": "刘芳(liufang)", "ip": "192.168.146.200", "device": "Android"}
+{"timestamp": "2026-05-28 00:07:56", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "外链访问", "user": "孙浩(sunhao)", "ip": "192.168.22.245", "device": "Web"}
+{"timestamp": "2026-05-27 23:59:00", "file_path": "/开发文档/API接口文档V2.0.md", "action": "分享", "user": "吴磊(wulei)", "ip": "192.168.25.111", "device": "Web"}
+{"timestamp": "2026-05-27 18:55:40", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "移动", "user": "王磊(wanglei)", "ip": "192.168.158.122", "device": "Windows PC"}
+{"timestamp": "2026-05-27 10:54:57", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "编辑", "user": "郑雪(zhengxue)", "ip": "192.168.59.185", "device": "Android"}
+{"timestamp": "2026-05-27 09:05:26", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "移动", "user": "孙浩(sunhao)", "ip": "192.168.106.243", "device": "iPhone"}
+{"timestamp": "2026-05-27 06:25:04", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "复制", "user": "张伟(zhangwei)", "ip": "192.168.43.207", "device": "iPhone"}
+{"timestamp": "2026-05-27 05:54:35", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "移动", "user": "吴磊(wulei)", "ip": "192.168.186.155", "device": "MacBook"}
+{"timestamp": "2026-05-27 05:23:32", "file_path": "/项目文档/项目Alpha/需求文档V1.2.docx", "action": "外链访问", "user": "刘芳(liufang)", "ip": "192.168.30.36", "device": "Windows PC"}
+{"timestamp": "2026-05-27 04:36:18", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "移动", "user": "郑雪(zhengxue)", "ip": "192.168.139.201", "device": "iPhone"}
+{"timestamp": "2026-05-27 02:34:51", "file_path": "/开发文档/数据库设计.sql", "action": "移动", "user": "王磊(wanglei)", "ip": "192.168.129.96", "device": "MacBook"}
+{"timestamp": "2026-05-27 00:29:15", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "上传", "user": "张伟(zhangwei)", "ip": "192.168.223.140", "device": "iPhone"}
+{"timestamp": "2026-05-26 23:02:40", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "分享", "user": "陈超(chenchao)", "ip": "192.168.205.109", "device": "iPhone"}
+{"timestamp": "2026-05-26 22:02:49", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "下载", "user": "郑雪(zhengxue)", "ip": "192.168.229.132", "device": "iPhone"}
+{"timestamp": "2026-05-26 19:24:40", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "外链访问", "user": "孙浩(sunhao)", "ip": "192.168.38.141", "device": "iPhone"}
+{"timestamp": "2026-05-26 19:11:42", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "删除", "user": "周静(zhoujing)", "ip": "192.168.47.56", "device": "Android"}
+{"timestamp": "2026-05-26 18:11:38", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "复制", "user": "吴磊(wulei)", "ip": "192.168.116.78", "device": "iPhone"}
+{"timestamp": "2026-05-26 15:15:28", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.76.177", "device": "Web"}
+{"timestamp": "2026-05-26 14:00:21", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "上传", "user": "李娜(lina)", "ip": "192.168.235.100", "device": "Web"}
+{"timestamp": "2026-05-26 10:55:25", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "上传", "user": "刘芳(liufang)", "ip": "192.168.32.11", "device": "iPhone"}
+{"timestamp": "2026-05-26 08:28:32", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "上传", "user": "吴磊(wulei)", "ip": "192.168.45.112", "device": "Windows PC"}
+{"timestamp": "2026-05-26 07:53:54", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "查看", "user": "郑雪(zhengxue)", "ip": "192.168.161.148", "device": "Android"}
+{"timestamp": "2026-05-26 07:20:19", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "下载", "user": "李娜(lina)", "ip": "192.168.11.182", "device": "Windows PC"}
+{"timestamp": "2026-05-26 06:52:19", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.168.16", "device": "MacBook"}
+{"timestamp": "2026-05-26 05:18:23", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "下载", "user": "孙浩(sunhao)", "ip": "192.168.33.129", "device": "Android"}
+{"timestamp": "2026-05-26 03:49:22", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "查看", "user": "吴磊(wulei)", "ip": "192.168.41.88", "device": "iPhone"}
+{"timestamp": "2026-05-26 00:24:07", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "编辑", "user": "周静(zhoujing)", "ip": "192.168.35.29", "device": "Web"}
+{"timestamp": "2026-05-26 00:08:45", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "外链访问", "user": "李娜(lina)", "ip": "192.168.101.106", "device": "Web"}
+{"timestamp": "2026-05-25 23:48:14", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "移动", "user": "周静(zhoujing)", "ip": "192.168.243.185", "device": "iPhone"}
+{"timestamp": "2026-05-25 23:15:46", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "重命名", "user": "赵敏(zhaomin)", "ip": "192.168.194.240", "device": "iPhone"}
+{"timestamp": "2026-05-25 18:55:33", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "删除", "user": "李娜(lina)", "ip": "192.168.1.148", "device": "iPhone"}
+{"timestamp": "2026-05-25 17:03:57", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "下载", "user": "刘芳(liufang)", "ip": "192.168.221.162", "device": "Web"}
+{"timestamp": "2026-05-25 15:40:55", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "编辑", "user": "刘芳(liufang)", "ip": "192.168.67.92", "device": "Windows PC"}
+{"timestamp": "2026-05-25 12:22:26", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "重命名", "user": "张伟(zhangwei)", "ip": "192.168.89.72", "device": "Web"}
+{"timestamp": "2026-05-25 12:09:15", "file_path": "/数据分析/2024Q3/财务报表_final.xlsx", "action": "下载", "user": "赵敏(zhaomin)", "ip": "192.168.91.218", "device": "Android"}
+{"timestamp": "2026-05-25 11:59:21", "file_path": "/开发文档/API接口文档V2.0.md", "action": "上传", "user": "孙浩(sunhao)", "ip": "192.168.57.147", "device": "Web"}
+{"timestamp": "2026-05-25 10:52:00", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "分享", "user": "赵敏(zhaomin)", "ip": "192.168.224.229", "device": "Web"}
+{"timestamp": "2026-05-25 10:10:44", "file_path": "/合同文档/2024Q2/供应商B框架合同.docx", "action": "删除", "user": "周静(zhoujing)", "ip": "192.168.182.58", "device": "Windows PC"}
+{"timestamp": "2026-05-25 02:09:47", "file_path": "/开发文档/数据库设计.sql", "action": "上传", "user": "李娜(lina)", "ip": "192.168.11.144", "device": "Web"}
+{"timestamp": "2026-05-24 23:49:47", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "下载", "user": "吴磊(wulei)", "ip": "192.168.37.197", "device": "Web"}
+{"timestamp": "2026-05-24 20:56:23", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "上传", "user": "吴磊(wulei)", "ip": "192.168.148.215", "device": "iPhone"}
+{"timestamp": "2026-05-24 19:40:33", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "复制", "user": "孙浩(sunhao)", "ip": "192.168.144.49", "device": "Windows PC"}
+{"timestamp": "2026-05-24 18:11:42", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "复制", "user": "刘芳(liufang)", "ip": "192.168.39.88", "device": "Windows PC"}
+{"timestamp": "2026-05-24 17:56:12", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "编辑", "user": "张伟(zhangwei)", "ip": "192.168.180.16", "device": "Windows PC"}
+{"timestamp": "2026-05-24 16:05:54", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "下载", "user": "吴磊(wulei)", "ip": "192.168.6.212", "device": "MacBook"}
+{"timestamp": "2026-05-24 15:18:57", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "分享", "user": "张伟(zhangwei)", "ip": "192.168.167.230", "device": "Web"}
+{"timestamp": "2026-05-24 14:30:05", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "重命名", "user": "吴磊(wulei)", "ip": "192.168.43.44", "device": "iPhone"}
+{"timestamp": "2026-05-24 10:37:21", "file_path": "/开发文档/数据库设计.sql", "action": "移动", "user": "郑雪(zhengxue)", "ip": "192.168.190.197", "device": "Windows PC"}
+{"timestamp": "2026-05-24 10:31:27", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "重命名", "user": "张伟(zhangwei)", "ip": "192.168.193.218", "device": "iPhone"}
+{"timestamp": "2026-05-24 02:33:00", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "下载", "user": "孙浩(sunhao)", "ip": "192.168.173.213", "device": "Web"}
+{"timestamp": "2026-05-24 01:01:03", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "重命名", "user": "赵敏(zhaomin)", "ip": "192.168.194.20", "device": "Windows PC"}
+{"timestamp": "2026-05-24 00:33:20", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "外链访问", "user": "李娜(lina)", "ip": "192.168.178.26", "device": "Web"}
+{"timestamp": "2026-05-24 00:27:49", "file_path": "/共享资源/设计规范/品牌手册.pdf", "action": "重命名", "user": "刘芳(liufang)", "ip": "192.168.225.208", "device": "MacBook"}
+{"timestamp": "2026-05-24 00:06:58", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.102.37", "device": "MacBook"}
+{"timestamp": "2026-05-23 20:11:43", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "下载", "user": "郑雪(zhengxue)", "ip": "192.168.166.22", "device": "Web"}
+{"timestamp": "2026-05-23 18:11:39", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "移动", "user": "周静(zhoujing)", "ip": "192.168.50.197", "device": "Android"}
+{"timestamp": "2026-05-23 17:33:01", "file_path": "/人事行政/2024Q3/招聘计划.xlsx", "action": "外链访问", "user": "赵敏(zhaomin)", "ip": "192.168.3.206", "device": "Android"}
+{"timestamp": "2026-05-23 17:15:40", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "上传", "user": "郑雪(zhengxue)", "ip": "192.168.105.236", "device": "MacBook"}
+{"timestamp": "2026-05-23 17:13:17", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "外链访问", "user": "吴磊(wulei)", "ip": "192.168.229.114", "device": "Android"}
+{"timestamp": "2026-05-23 16:55:04", "file_path": "/合同文档/2024Q3/客户C服务合同.pdf", "action": "下载", "user": "王磊(wanglei)", "ip": "192.168.220.54", "device": "MacBook"}
+{"timestamp": "2026-05-23 16:23:03", "file_path": "/人事行政/2024Q2/员工培训资料.pdf", "action": "删除", "user": "王磊(wanglei)", "ip": "192.168.154.174", "device": "iPhone"}
+{"timestamp": "2026-05-23 15:34:36", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "复制", "user": "李娜(lina)", "ip": "192.168.47.18", "device": "Android"}
+{"timestamp": "2026-05-23 13:58:32", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "查看", "user": "孙浩(sunhao)", "ip": "192.168.177.249", "device": "Android"}
+{"timestamp": "2026-05-23 12:48:28", "file_path": "/开发文档/API接口文档V2.0.md", "action": "查看", "user": "李娜(lina)", "ip": "192.168.112.182", "device": "iPhone"}
+{"timestamp": "2026-05-23 10:21:11", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "编辑", "user": "周静(zhoujing)", "ip": "192.168.155.48", "device": "iPhone"}
+{"timestamp": "2026-05-23 08:15:26", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "外链访问", "user": "王磊(wanglei)", "ip": "192.168.186.65", "device": "iPhone"}
+{"timestamp": "2026-05-23 04:49:37", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "查看", "user": "赵敏(zhaomin)", "ip": "192.168.81.227", "device": "Windows PC"}
+{"timestamp": "2026-05-23 02:34:00", "file_path": "/开发文档/API接口文档V2.0.md", "action": "上传", "user": "赵敏(zhaomin)", "ip": "192.168.100.201", "device": "Android"}
+{"timestamp": "2026-05-23 02:07:30", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "重命名", "user": "赵敏(zhaomin)", "ip": "192.168.154.243", "device": "MacBook"}
+{"timestamp": "2026-05-23 02:02:16", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "分享", "user": "吴磊(wulei)", "ip": "192.168.246.79", "device": "MacBook"}
+{"timestamp": "2026-05-23 00:12:39", "file_path": "/项目文档/项目Beta/项目计划.md", "action": "分享", "user": "王磊(wanglei)", "ip": "192.168.50.34", "device": "Windows PC"}
+{"timestamp": "2026-05-22 22:16:56", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "下载", "user": "赵敏(zhaomin)", "ip": "192.168.15.190", "device": "Android"}
+{"timestamp": "2026-05-22 19:38:19", "file_path": "/项目文档/项目Beta/风险评估.pdf", "action": "移动", "user": "郑雪(zhengxue)", "ip": "192.168.199.122", "device": "iPhone"}
+{"timestamp": "2026-05-22 18:04:08", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "移动", "user": "陈超(chenchao)", "ip": "192.168.172.153", "device": "Web"}
+{"timestamp": "2026-05-22 17:31:35", "file_path": "/项目文档/项目Alpha/测试报告.xlsx", "action": "复制", "user": "郑雪(zhengxue)", "ip": "192.168.215.171", "device": "iPhone"}
+{"timestamp": "2026-05-22 13:10:39", "file_path": "/合同文档/2024Q2/客户A合作协议.pdf", "action": "下载", "user": "孙浩(sunhao)", "ip": "192.168.147.238", "device": "MacBook"}
+{"timestamp": "2026-05-22 12:39:05", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "移动", "user": "李娜(lina)", "ip": "192.168.19.242", "device": "iPhone"}
+{"timestamp": "2026-05-22 11:56:21", "file_path": "/数据分析/2024Q2/用户行为分析.csv", "action": "重命名", "user": "吴磊(wulei)", "ip": "192.168.159.223", "device": "Web"}
+{"timestamp": "2026-05-22 11:46:18", "file_path": "/共享资源/设计规范/UI组件库.fig", "action": "复制", "user": "陈超(chenchao)", "ip": "192.168.128.218", "device": "Android"}
+{"timestamp": "2026-05-22 11:04:35", "file_path": "/数据分析/2024Q2/销售报表.xlsx", "action": "上传", "user": "赵敏(zhaomin)", "ip": "192.168.250.170", "device": "Android"}
+{"timestamp": "2026-05-22 10:31:37", "file_path": "/合同文档/2024Q3/保密协议模板.docx", "action": "编辑", "user": "李娜(lina)", "ip": "192.168.21.247", "device": "Android"}
+{"timestamp": "2026-05-22 09:01:14", "file_path": "/数据分析/2024Q3/市场调研数据.csv", "action": "编辑", "user": "王磊(wanglei)", "ip": "192.168.163.54", "device": "MacBook"}
+{"timestamp": "2026-05-22 08:38:30", "file_path": "/开发文档/API接口文档V2.0.md", "action": "上传", "user": "王磊(wanglei)", "ip": "192.168.36.210", "device": "Android"}

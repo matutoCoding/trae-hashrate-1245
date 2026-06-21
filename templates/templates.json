@@ -1,0 +1,14 @@
+{
+  "daily_contract": {
+    "params": {
+      "file_keyword": "合同",
+      "user_keyword": null,
+      "date_from": null,
+      "date_to": null,
+      "actions": [
+        "外链访问"
+      ]
+    },
+    "created_at": "2026-06-22 06:15:51"
+  }
+}
