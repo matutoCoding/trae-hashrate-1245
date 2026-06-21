@@ -1,0 +1,20 @@
+{
+  "night_start": 0,
+  "night_end": 8,
+  "risk_actions_high": [
+    "删除",
+    "外链访问"
+  ],
+  "risk_actions_medium": [
+    "分享"
+  ],
+  "risk_actions_low": [
+    "编辑",
+    "移动"
+  ],
+  "key_directories": [
+    "合同",
+    "人事",
+    "财务"
+  ]
+}

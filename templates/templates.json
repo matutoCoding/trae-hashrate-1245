@@ -1,22 +1,25 @@
 {
-  "weekly_audit": {
+  "weekly_contract": {
     "params": {
-      "file_keyword": "合同,项目,数据",
-      "user_keyword": "张伟,李娜,王磊",
+      "file_keyword": "合同",
+      "user_keyword": null,
       "date_from": "7days",
       "date_to": "today",
       "actions": null,
       "risk_only": true,
-      "group_mode": "file+user",
-      "sort_by": "timestamp",
+      "group_by": "auto",
+      "sort": "timestamp",
       "sort_order": "desc",
       "skip": 0,
       "head": null,
-      "input_path": null,
-      "field_map": null,
-      "export_path": "weekly_audit.md",
-      "limit": 20
+      "limit": 20,
+      "rules_name": "strict",
+      "compare": "14days",
+      "compare_b": null,
+      "report_title": "周度合同审计",
+      "business_line": "法务部",
+      "owner": "张伟"
     },
-    "created_at": "2026-06-22 06:46:53"
+    "created_at": "2026-06-22 07:04:00"
   }
 }
